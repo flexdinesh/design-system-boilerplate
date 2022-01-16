@@ -1,0 +1,29 @@
+{
+  "name": "design-system-boilerplate",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flexdinesh/design-system-boilerplate "
+  },
+  "workspaces": [
+    "design-system",
+    "boilerplate-cra",
+    "boilerplate-nextjs"
+  ],
+  "scripts": {
+    "clean": "rimraf '.cache/*'",
+    "rm:nm": "rimraf '**/node_modules'",
+    "lint": "yarn workspace design-system lint && yarn workspace boilerplate-nextjs lint && yarn workspace boilerplate-cra lint",
+    "typecheck": "yarn workspace website typecheck && yarn workspace api typecheck",
+    "next:dev": "yarn workspace boilerplate-nextjs dev",
+    "cra:dev": "yarn workspace boilerplate-cra start"
+  },
+  "devDependencies": {
+    "rimraf": "3.0.2"
+  },
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  }
+}

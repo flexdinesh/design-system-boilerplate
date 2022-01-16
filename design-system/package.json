@@ -1,0 +1,108 @@
+{
+  "name": "design-system",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf --no-glob ./dist && cross-env NODE_ENV=production microbundle --tsconfig ./tsconfig.build.json --jsx React.createElement --jsxFragment React.Fragment -f cjs,es --no-compress",
+    "build:react17jsx": "microbundle --tsconfig ./tsconfig.build.json --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx --compress",
+    "dev": "microbundle watch --tsconfig ./tsconfig.build.json  --no-compress",
+    "clean": "rimraf --no-glob ./dist ./tsconfig.tsbuildinfo ./node_modules/.cache",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "typecheck": "tsc --project ./tsconfig.json --noEmit",
+    "test": "run-s 'test:*'",
+    "test:unit": "jest --config jest.config.js --maxWorkers=50% --color $@",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook --output-dir build/storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.5",
+    "@emotion/babel-plugin": "11.7.2",
+    "@emotion/babel-preset-css-prop": "11.2.0",
+    "@emotion/eslint-plugin": "^11.7.0",
+    "@mdx-js/react": "1.6.22",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-docs": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-storysource": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "@testing-library/jest-dom": "5.16.1",
+    "@testing-library/react": "12.1.2",
+    "@testing-library/react-hooks": "7.0.2",
+    "@types/jest": "27.0.3",
+    "@types/lodash.words": "^4.2.6",
+    "@types/node": "17.0.1",
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
+    "@types/styled-system": "^5.1.14",
+    "@typescript-eslint/eslint-plugin": "5.8.1",
+    "@typescript-eslint/parser": "5.8.1",
+    "autoprefixer": "10.4.0",
+    "babel-loader": "8.2.3",
+    "babel-plugin-macros": "3.1.0",
+    "babel-plugin-polyfill-corejs3": "0.4.0",
+    "core-js": "3.20.1",
+    "cross-env": "7.0.3",
+    "eslint": "8.5.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jest": "25.3.2",
+    "eslint-plugin-jest-formatting": "3.1.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-regexp": "1.5.1",
+    "eslint-plugin-sonarjs": "0.11.0",
+    "eslint-plugin-storybook": "0.5.5",
+    "eslint-plugin-testing-library": "5.0.1",
+    "jest": "27.4.5",
+    "just-clone": "^5.0.1",
+    "just-safe-set": "^4.0.2",
+    "microbundle": "0.14.2",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.5.1",
+    "rimraf": "3.0.2",
+    "rooks": "5.8.0",
+    "shell-quote": "1.7.3",
+    "styled-system": "^5.1.5",
+    "ts-jest": "27.1.2",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "4.5.4",
+    "webpack": "5.65.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependenciesMeta": {
+    "@emotion/react": {
+      "optional": false
+    },
+    "@emotion/styled": {
+      "optional": false
+    },
+    "react": {
+      "optional": false
+    },
+    "react-dom": {
+      "optional": false
+    }
+  }
+}

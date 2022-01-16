@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "incremental": true,
+      "isolatedModules": true,
+      "moduleResolution": "node",
+      "noEmit": true,
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "useUnknownInCatchVariables": true,
+    },
+    "exclude": ["node_modules", ".yarn"]
+  }

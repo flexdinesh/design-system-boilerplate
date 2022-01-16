@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "jsxFactory": "",
+    "jsxFragmentFactory": ""
+  },
+  "exclude": ["**/*.stories.tsx", "**/*.stories.mdx", ".storybook/**"]
+}
