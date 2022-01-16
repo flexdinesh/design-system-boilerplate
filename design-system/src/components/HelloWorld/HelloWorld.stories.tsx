@@ -1,5 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
+import { StorybookThemeWrapper } from 'util/storybook-templates';
 import HelloWorld from './HelloWorld';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -19,7 +20,9 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof HelloWorld> = (args) => (
-  <HelloWorld {...args} />
+  <StorybookThemeWrapper>
+    <HelloWorld {...args} />
+  </StorybookThemeWrapper>
 );
 
 export const Primary = Template.bind({});

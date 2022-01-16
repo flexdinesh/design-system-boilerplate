@@ -1,9 +1,14 @@
-import React, { ComponentProps } from 'react';
-import Box from '../Box';
+import React from 'react';
+import Box from 'components/Box';
+import type { BoxProps } from 'components/Box';
 
-type Props = ComponentProps<typeof Box>;
+export type TextProps = BoxProps;
 
-const Text: React.FC<Props> = ({ as = 'span', color = 'body', ...props }) => {
+const Text: React.FC<TextProps> = ({
+  as = 'span',
+  color = 'body',
+  ...props
+}) => {
   return (
     <Box as={as} {...props} color={color}>
       {props.children}

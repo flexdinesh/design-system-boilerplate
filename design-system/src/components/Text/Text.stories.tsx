@@ -23,7 +23,7 @@ const Template: ComponentStory<typeof Text> = (args) => {
         alignItems="center"
         justifyContent="center"
         backgroundColor="background">
-        <Text {...args}>I am a text. Try changing the theme</Text>
+        <Text {...args}>I am a text. Try changing the theme.</Text>
       </Box>
     </StorybookThemeWrapper>
   );

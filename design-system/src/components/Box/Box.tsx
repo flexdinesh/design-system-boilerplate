@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import type { ComponentProps } from 'react';
 import {
   border,
   color,
@@ -15,6 +16,7 @@ import {
   space,
   zIndex,
 } from 'styled-system';
+import { tokens } from 'core/theme';
 import type {
   ThemeBordersProps,
   ThemeColorProps,
@@ -22,13 +24,10 @@ import type {
   ThemeFlexboxProps,
   ThemeGridProps,
   ThemeLayoutProps,
-  ThemeMarginProps,
   ThemeOverflowProps,
-  ThemePaddingProps,
   ThemePositionProps,
   ThemeShadowProps,
   ThemeSpaceProps,
-  // ThemeTypographyProps,
   ThemeZIndexProps,
 } from 'core/types';
 
@@ -39,9 +38,7 @@ interface Props
     ThemeFlexboxProps,
     ThemeGridProps,
     ThemeLayoutProps,
-    ThemeMarginProps,
     ThemeOverflowProps,
-    ThemePaddingProps,
     ThemePositionProps,
     ThemeShadowProps,
     ThemeSpaceProps,
@@ -68,11 +65,17 @@ const Box = styled('div')<Props>(
   position,
   shadow,
   space,
-  zIndex
+  zIndex,
+  {
+    fontFamily: tokens.fontFamily.body,
+    color: tokens.colors.body,
+  }
 );
 
 if (process.env.NODE_ENV !== 'production') {
   Box.displayName = 'Box';
 }
+
+export type BoxProps = ComponentProps<typeof Box>;
 
 export default Box;

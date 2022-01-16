@@ -12,7 +12,12 @@
     "composite": false,
     "incremental": true,
     "outDir": "dist",
-    "paths": {}
+    "paths": {},
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
   },
   "exclude": ["dist"]
 }

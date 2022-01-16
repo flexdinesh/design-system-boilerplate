@@ -1,6 +1,10 @@
 import { Global } from '@emotion/react';
 import React from 'react';
 
+/* 
+  Either directly import the css-reset.css file
+  or use this wrapped component but not both
+  */
 const CSSReset = () => {
   return (
     <Global

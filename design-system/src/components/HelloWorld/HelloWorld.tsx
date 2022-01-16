@@ -1,5 +1,6 @@
 import React from 'react';
 import type { FC } from 'react';
+import Box from 'components/Box';
 import * as styles from './HelloWorld.styles';
 
 type HelloWorldProps = {
@@ -7,7 +8,7 @@ type HelloWorldProps = {
 };
 
 const HelloWorld: FC<HelloWorldProps> = ({ name }) => {
-  return <div css={styles.container}>Hello World, {name}!</div>;
+  return <Box>Hello World, {name}!</Box>;
 };
 
 if (process.env.NODE_ENV !== 'production') {

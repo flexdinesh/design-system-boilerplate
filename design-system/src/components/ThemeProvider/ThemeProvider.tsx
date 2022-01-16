@@ -40,6 +40,11 @@ const ThemeProvider: React.FC<Props> = ({ themes, defaultTheme, children }) => {
   return (
     <>
       <Global styles={globalCssVariablesForAllThemes} />
+      <Global
+        styles={`
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap');
+      `}
+      />
       <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
     </>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import Box from 'components/Box';
 import CSSReset from 'components/CSSReset';
 import ThemeProvider from 'components/ThemeProvider';
 import ThemeSwitcher from 'components/ThemeSwitcher';
@@ -11,7 +12,9 @@ export const StorybookThemeWrapper: React.FC = ({ children }) => {
       <CSSReset />
       <ThemeProvider themes={themes} defaultTheme="light">
         <ThemeSwitcher />
-        {children}
+        <Box width={'100%'} height={'100vh'} backgroundColor={'background'}>
+          {children}
+        </Box>
       </ThemeProvider>
     </>
   );

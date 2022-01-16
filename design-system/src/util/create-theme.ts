@@ -35,7 +35,7 @@ export const createTheme = <ThemeDefinition extends Record<string, any>>(
     }
     if (isLeaf) {
       const cssVarName = `--theme-${location.join('-')}`;
-      const cssVarValue = value;
+      const cssVarValue = typeof value === 'number' ? `${value}px` : value;
       set(theme, location, `var(${cssVarName})`);
       __cssVars[cssVarName] = cssVarValue;
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import type { FC } from 'react';
 import Box from 'components/Box';
+import Button from 'components/Button';
 import { themes } from 'core/theme';
 
 /* just the theme name is enough since all theme css vars are already inserted into stylesheet */
@@ -21,6 +22,13 @@ const ThemeSwitcher: FC = () => {
     setTheme(nextTheme);
   };
 
+  React.useEffect(() => {
+    const dataThemeInBodyElem = document.body.getAttribute(`data-theme`);
+    if (dataThemeInBodyElem) {
+      setTheme(dataThemeInBodyElem);
+    }
+  }, []);
+
   return (
     <div
       css={{
@@ -28,13 +36,9 @@ const ThemeSwitcher: FC = () => {
         top: 0,
         right: 0,
       }}>
-      <Box
-        as="button"
-        bg={'primary100'}
-        color="alternate"
-        onClick={toggleTheme}>
+      <Button margin="medium" onClick={toggleTheme}>
         Theme: {theme}
-      </Box>
+      </Button>
     </div>
   );
 };

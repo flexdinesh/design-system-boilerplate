@@ -1,5 +1,5 @@
 const fontSizeScale = [12, 14, 16, 20, 24, 32] as const;
-const fontWeightScale = [300, 500, 800];
+const fontWeightScale = [300, 600, 800];
 
 const fontSizes = {
   small: fontSizeScale[1],
@@ -13,4 +13,9 @@ const fontWeights = {
   black: fontWeightScale[2],
 };
 
-export { fontSizes, fontWeights };
+const fontFamily = {
+  body: 'Ivert, sans-serif',
+  heading: 'Ivert, sans-serif',
+};
+
+export { fontSizes, fontWeights, fontFamily };

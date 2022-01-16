@@ -14,21 +14,15 @@ export default {
 const Template: ComponentStory<typeof Box> = (args) => {
   return (
     <StorybookThemeWrapper>
-      <Box {...args}>Box Component</Box>
+      <Box {...args}>Box w:200, height:100</Box>
     </StorybookThemeWrapper>
   );
 };
 
 export const BoxProps = Template.bind({});
 BoxProps.args = {
-  backgroundColor: 'primary100',
-  width: 100,
-  height: 100,
-};
-
-export const ResponsiveBox = Template.bind({});
-ResponsiveBox.args = {
-  bg: 'primary300',
-  width: '100%',
+  border: '1px solid',
+  borderColor: 'primary500',
+  width: 200,
   height: 100,
 };

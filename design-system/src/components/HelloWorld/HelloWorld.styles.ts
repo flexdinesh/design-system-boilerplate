@@ -1,3 +1,1 @@
-export const container = {
-  background: 'yellow',
-};
+export const container = {};
