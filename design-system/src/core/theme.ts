@@ -2,7 +2,7 @@ import { breakpoints, mediaQueries } from 'tokens/breakpoints';
 import * as colors from 'tokens/colors';
 import { space } from 'tokens/space';
 import { fontSizes, fontWeights, fontFamily } from 'tokens/typography';
-import { createTheme } from 'util/create-theme';
+import { createTheme } from 'util/theme';
 
 /* light mode - default */
 export const light = createTheme({

@@ -1,6 +1,6 @@
-import { createTheme } from '../create-theme';
+import { createTheme } from '../theme';
 
-describe('util/create-theme', () => {
+describe('util/theme', () => {
   it('createTheme', () => {
     const themeDefinition = {
       name: 'dark',

@@ -5,7 +5,6 @@ import ThemeProvider from 'components/ThemeProvider';
 import ThemeSwitcher from 'components/ThemeSwitcher';
 import { themes } from 'core/theme';
 
-('components/ThemeSwitcher');
 export const StorybookThemeWrapper: React.FC = ({ children }) => {
   return (
     <>
