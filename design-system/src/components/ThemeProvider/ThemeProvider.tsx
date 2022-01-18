@@ -136,6 +136,13 @@ const ThemeWrapper: React.FC<ThemeWrapperProps> = ({
       <Global
         styles={`
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap');
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+              'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+              sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
       `}
       />
       <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>

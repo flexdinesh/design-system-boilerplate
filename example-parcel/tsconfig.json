@@ -16,11 +16,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5",
-    "paths": {
-      "@design-system/*": ["../design-system/src/*"],
-      "@design-system": ["../design-system/src/index"]
-    }
+    "target": "es5"
   },
-  "include": ["src"]
+  "include": ["src", "custom.d.ts"]
 }

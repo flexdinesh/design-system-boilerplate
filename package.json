@@ -7,7 +7,7 @@
   },
   "workspaces": [
     "design-system",
-    "boilerplate-cra",
+    "example-parcel",
     "boilerplate-nextjs"
   ],
   "scripts": {
@@ -16,7 +16,7 @@
     "lint": "yarn workspace design-system lint && yarn workspace boilerplate-nextjs lint && yarn workspace boilerplate-cra lint",
     "typecheck": "yarn workspace website typecheck && yarn workspace api typecheck",
     "next:dev": "yarn workspace boilerplate-nextjs dev",
-    "cra:dev": "yarn workspace boilerplate-cra start"
+    "csr:dev": "yarn workspace example-parcel start"
   },
   "devDependencies": {
     "rimraf": "3.0.2"
