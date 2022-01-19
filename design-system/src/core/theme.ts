@@ -52,7 +52,7 @@ export const brown = createTheme({
   fontFamily,
 });
 
-/* since we only use css vars as token values - all theme keys have the same values */
+/* since we only use css vars as token values - theme keys have the same values across themes */
 export const tokens = light;
 
 export const themes = [light, dark, yellow, brown];

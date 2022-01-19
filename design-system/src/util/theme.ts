@@ -2,31 +2,36 @@ import clone from 'just-clone';
 import set from 'just-safe-set';
 import { walkObject } from './object';
 
-type NameKey = 'name';
+// restricting token groups to be flat
+type TokenGroup = { [key: string]: string | number };
+type ThemeDefinition = { [key: string]: string | TokenGroup };
+
 type CreatedTheme<
-  ThemeDefinition extends Record<string, any>,
-  NestedKey extends string = '-'
-> = {
-  [Key in keyof ThemeDefinition]: ThemeDefinition[Key] extends object
-    ? CreatedTheme<ThemeDefinition[Key], `${NestedKey}-${string & Key}`>
-    : Key extends NameKey
-    ? ThemeDefinition[Key]
-    : `var(${NestedKey}-${string & Key})`;
-};
+  T extends ThemeDefinition | TokenGroup,
+  NestedKey extends string = '--theme-'
+> = T extends any
+  ? {
+      readonly [Key in keyof T]: T[Key] extends TokenGroup
+        ? CreatedTheme<T[Key], `${NestedKey}-${string & Key}`>
+        : Key extends 'name'
+        ? T[Key]
+        : `var(${NestedKey}-${string & Key})`;
+    }
+  : never;
 
 const tokenKeysToSkip = ['name'];
-export const createTheme = <ThemeDefinition extends Record<string, any>>(
-  themeDefinition: ThemeDefinition
-): CreatedTheme<ThemeDefinition> & {
-  __definition: ThemeDefinition;
+export const createTheme = <ThemeDef extends ThemeDefinition>(
+  themeDefinition: ThemeDef
+): CreatedTheme<ThemeDef> & {
+  __definition: ThemeDef;
   __cssVars: Record<string, string | number>;
 } => {
   // we store the original tokens in __definition
-  const __definition = clone<ThemeDefinition>(themeDefinition);
+  const __definition = clone<ThemeDef>(themeDefinition);
   // we store the created css variables in __cssVars
   const __cssVars: Record<string, string | number> = {};
   // we assign css vars to token keys
-  const theme = {} as CreatedTheme<ThemeDefinition>;
+  const theme = {} as CreatedTheme<ThemeDef>;
 
   walkObject(themeDefinition, ({ value, location, isLeaf }) => {
     if (tokenKeysToSkip.includes(location[0])) {
