@@ -1,35 +1,20 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
-import { CSSReset, ThemeProvider, themes } from 'design-system/dist';
+import { CSSReset, ThemeProvider, themes } from './design-system';
 import ThemeSwitcher from './ThemeSwitcher';
-import logo from './logo.svg';
+import Header from './Header';
 import * as styles from './App.styles';
 
-function App() {
+const App = () => {
   return (
-    <React.Fragment>
+    <div css={styles.app}>
       <CSSReset />
       <ThemeProvider themes={themes} defaultTheme="light">
         <ThemeSwitcher />
-        <div css={styles}>
-          <header css={styles.appHeader}>
-            <img src={logo} css={styles.appLogo} alt="logo" />
-            <p>
-              Edit <code>src/App.tsx</code> and save to reload.
-            </p>
-            <a
-              css={styles.appLink}
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-        </div>
+        <Header />
+        <main css={{ height: '100%' }}></main>
       </ThemeProvider>
-    </React.Fragment>
+    </div>
   );
-}
+};
 
 export default App;

@@ -1,8 +1,16 @@
+/** @jsxImportSource @emotion/react */
 import { ThemeProvider as EmotionThemeProvider, Global } from '@emotion/react';
-import React from 'react';
-import { themes } from 'core/theme';
-import type { Themes } from 'core/types';
-import { isBrowser } from 'util/helpers';
+import {
+  createContext,
+  useState,
+  useCallback,
+  useMemo,
+  useEffect,
+  useContext,
+} from 'react';
+import { themes } from '../../core/theme';
+import type { Themes } from '../../core/types';
+import { isBrowser } from '../../util/helpers';
 
 /* just the theme name is enough since all theme css vars are already inserted into stylesheet */
 const themeNames = themes.map((t) => t.name);
@@ -17,7 +25,7 @@ const defaultContext = {
   theme: themeNames[0],
 };
 
-const ThemeContext = React.createContext<ThemeContext>(
+const ThemeContext = createContext<ThemeContext>(
   defaultContext as ThemeContext
 );
 
@@ -36,9 +44,9 @@ const ContextWrapper: React.FC<ContextWrapperProps> = ({
       currentTheme = themeAttrInBodyElem;
     }
   }
-  const [theme, setTheme] = React.useState(currentTheme);
+  const [theme, setTheme] = useState(currentTheme);
 
-  const toggleTheme = React.useCallback(() => {
+  const toggleTheme = useCallback(() => {
     const index = themeNames.indexOf(theme);
     let nextTheme = theme;
     if (index >= 0 && index < themeNames.length - 1) {
@@ -52,7 +60,7 @@ const ContextWrapper: React.FC<ContextWrapperProps> = ({
     }
   }, [theme, setTheme]);
 
-  const _setTheme = React.useCallback(
+  const _setTheme = useCallback(
     ({ themeName }: { themeName: string }) => {
       if (isBrowser) {
         document.body.setAttribute(`data-theme`, themeName);
@@ -62,7 +70,7 @@ const ContextWrapper: React.FC<ContextWrapperProps> = ({
     [setTheme]
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isBrowser) {
       const themeAttrInBodyElem = document.body.getAttribute(`data-theme`);
       if (themeAttrInBodyElem) {
@@ -71,7 +79,7 @@ const ContextWrapper: React.FC<ContextWrapperProps> = ({
     }
   }, []);
 
-  const contextValue = React.useMemo(() => {
+  const contextValue = useMemo(() => {
     return { theme, toggleTheme, setTheme: _setTheme };
   }, [theme, toggleTheme, _setTheme]);
 
@@ -83,7 +91,7 @@ const ContextWrapper: React.FC<ContextWrapperProps> = ({
 };
 
 export const useTheme = () => {
-  const themeContext = React.useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
   if (!themeContext.setTheme || !themeContext.toggleTheme) {
     throw new Error('Please setup ThemeProvider');
   }
@@ -109,14 +117,14 @@ const ThemeWrapper: React.FC<ThemeWrapperProps> = ({
     throw new Error(`There's no theme with name: ${defaultTheme}`);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     const dataThemeInBodyElem = document.body.getAttribute(`data-theme`);
     if (!dataThemeInBodyElem) {
       document.body.setAttribute(`data-theme`, defaultTheme);
     }
   }, [defaultTheme]);
 
-  const globalCssVariablesForAllThemes = React.useMemo(() => {
+  const globalCssVariablesForAllThemes = useMemo(() => {
     const globalStyles = themes.reduce<{
       [key: string]: Record<string, string | number>;
     }>((styleObject, theme) => {
@@ -135,7 +143,7 @@ const ThemeWrapper: React.FC<ThemeWrapperProps> = ({
       <Global styles={globalCssVariablesForAllThemes} />
       <Global
         styles={`
-          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
           body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
               'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

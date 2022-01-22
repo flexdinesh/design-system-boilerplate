@@ -1,8 +1,13 @@
-import { breakpoints, mediaQueries } from 'tokens/breakpoints';
-import * as colors from 'tokens/colors';
-import { space } from 'tokens/space';
-import { fontSizes, fontWeights, fontFamily } from 'tokens/typography';
-import { createTheme } from 'util/theme';
+import { breakpoints, mediaQueries } from '../tokens/breakpoints';
+import * as colors from '../tokens/colors';
+import { space } from '../tokens/space';
+import {
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+} from '../tokens/typography';
+import { createTheme } from '../util/theme';
 
 /* light mode - default */
 export const light = createTheme({
@@ -14,6 +19,7 @@ export const light = createTheme({
   fontSizes,
   fontWeights,
   fontFamily,
+  lineHeights,
 });
 
 /* dark mode */
@@ -26,6 +32,7 @@ export const dark = createTheme({
   fontSizes,
   fontWeights,
   fontFamily,
+  lineHeights,
 });
 
 /* yellow mode */
@@ -38,6 +45,7 @@ export const yellow = createTheme({
   fontSizes,
   fontWeights,
   fontFamily,
+  lineHeights,
 });
 
 /* brown mode */
@@ -50,6 +58,7 @@ export const brown = createTheme({
   fontSizes,
   fontWeights,
   fontFamily,
+  lineHeights,
 });
 
 /* since we only use css vars as token values - theme keys have the same values across themes */

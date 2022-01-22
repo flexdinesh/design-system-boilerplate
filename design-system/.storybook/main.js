@@ -1,6 +1,10 @@
 const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
+const nodeLibsBrowser = require('node-libs-browser')
+nodeLibsBrowser.assert = require.resolve('browser-assert')
+nodeLibsBrowser.util = require.resolve('util')
+
 module.exports = {
   framework: '@storybook/react',
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(ts|tsx|js|jsx)'],
@@ -24,33 +28,34 @@ module.exports = {
     babelModeV7: false,
   },
   babel: (config) => {
-    config.presets.push(require.resolve('@emotion/babel-preset-css-prop'));
+    // config.presets.push(require.resolve('@emotion/babel-preset-css-prop'));
     return config;
   },
   webpackFinal: async (config) => {
     // Emotion 11 hacks
 
-    const emotionReactEleven = path.dirname(
-      require.resolve('@emotion/react/package.json')
-    );
-    const emotionStyledEleven = path.dirname(
-      require.resolve('@emotion/styled/package.json')
-    );
+    // const emotionReactEleven = path.dirname(
+    //   require.resolve('@emotion/react/package.json')
+    // );
+    // const emotionStyledEleven = path.dirname(
+    //   require.resolve('@emotion/styled/package.json')
+    // );
 
     return {
       ...config,
       resolve: {
         ...config.resolve,
-        plugins: [
-          ...config.resolve.plugins,
-          new TsconfigPathsPlugin({})
-      ],
+        plugins: [...config.resolve.plugins, new TsconfigPathsPlugin({})],
         alias: {
           ...config.resolve.alias,
-          '@emotion/core': emotionReactEleven,
-          '@emotion/styled': emotionStyledEleven,
-          'emotion-theming': emotionReactEleven,
+          // '@emotion/core': emotionReactEleven,
+          // '@emotion/styled': emotionStyledEleven,
+          // 'emotion-theming': emotionReactEleven,
+          // inherits: 'inherits/inherits_browser.js',
+          // superagent: 'superagent/lib/client',
+          // emitter: 'component-emitter',
         },
+        // mainFields: [...config.resolve.mainFields, 'browser', 'module', 'main'],
       },
     };
   },

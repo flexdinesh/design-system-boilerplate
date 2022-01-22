@@ -1,8 +1,8 @@
+/** @jsxImportSource @emotion/react */
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
-import Box from 'components/Box';
-import Button from 'components/Button';
-import { StorybookThemeWrapper } from 'util/storybook-templates';
+import Box from '../../components/Box';
+import Button from '../../components/Button';
+import { StorybookThemeWrapper } from '../../storybook-helpers/StorybookThemeWrapper';
 
 export default {
   title: 'Components/Button',
@@ -21,22 +21,51 @@ const Template: ComponentStory<typeof Button> = (args) => {
         }}
         alignItems="center"
         justifyContent="center"
-        backgroundColor={'background'}>
-        <Button {...args} variant="primary">
-          Primary
-        </Button>
-        <Button {...args} variant="secondary">
-          Secondary
-        </Button>
-        <Button {...args} variant="outline">
-          Outline
-        </Button>
+        flexDirection="column">
+        <Box
+          width={'100%'}
+          height={80}
+          display="flex"
+          css={{
+            gap: 16,
+          }}
+          alignItems="center"
+          justifyContent="center"
+          backgroundColor={'background'}>
+          <Button {...args} variant="primary">
+            Primary
+          </Button>
+          <Button {...args} variant="secondary">
+            Secondary
+          </Button>
+          <Button {...args} variant="outline">
+            Outline
+          </Button>
+        </Box>
+        <Box
+          width={'100%'}
+          height={80}
+          display="flex"
+          css={{
+            gap: 16,
+          }}
+          alignItems="center"
+          justifyContent="center"
+          backgroundColor={'background'}>
+          <Button {...args} size="large" variant="primary">
+            Primary
+          </Button>
+          <Button {...args} size="large" variant="secondary">
+            Secondary
+          </Button>
+          <Button {...args} size="large" variant="outline">
+            Outline
+          </Button>
+        </Box>
       </Box>
     </StorybookThemeWrapper>
   );
 };
 
 export const Buttons = Template.bind({});
-Buttons.args = {
-  variant: 'primary',
-};
+Buttons.args = {};

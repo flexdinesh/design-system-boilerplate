@@ -1,2 +1,2 @@
-export { useTheme } from 'components/ThemeProvider/ThemeProvider';
+export { useTheme } from '../components/ThemeProvider/ThemeProvider';
 export { useToggleTheme } from './useToggleTheme';

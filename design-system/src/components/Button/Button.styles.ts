@@ -1,32 +1,37 @@
 import { css, CSSObject } from '@emotion/react';
-import * as CSS from 'csstype';
-import { tokens } from 'core/theme';
-import type { ColorTokens, SpaceTokens } from 'core/types';
+import { tokens } from '../../core/theme';
 import type { ButtonProps } from './Button';
 
-type Colors = ColorTokens | CSS.Property.Color;
-export const mapVariantTobackgroundColor: {
-  [variant in NonNullable<ButtonProps['variant']>]: Colors;
+export const variantStyles: {
+  [variant in NonNullable<ButtonProps['variant']>]: CSSObject;
 } = {
-  primary: tokens.colors.primary500,
-  secondary: tokens.colors.secondary500,
-  outline: 'transparent',
+  primary: {
+    backgroundColor: tokens.colors.primary500,
+    color: tokens.colors.textAlternate,
+  },
+  secondary: {
+    backgroundColor: tokens.colors.secondary500,
+    color: tokens.colors.textAlternate,
+  },
+  outline: {
+    backgroundColor: 'transparent',
+    color: tokens.colors.primary500,
+    border: `1px solid ${tokens.colors.primary500}`,
+  },
 };
 
-export const mapVariantToColor: {
-  [variant in NonNullable<ButtonProps['variant']>]: Colors;
+export const sizeStyles: {
+  [variant in NonNullable<ButtonProps['size']>]: CSSObject;
 } = {
-  primary: tokens.colors.alternate,
-  secondary: tokens.colors.alternate,
-  outline: tokens.colors.primary500,
-};
-
-export const mapSizeToPadding: {
-  [variant in NonNullable<ButtonProps['size']>]: SpaceTokens;
-} = {
-  small: tokens.space.small,
-  medium: tokens.space.medium,
-  large: tokens.space.large,
+  small: {
+    padding: tokens.space.small,
+  },
+  medium: {
+    padding: tokens.space.medium,
+  },
+  large: {
+    padding: tokens.space.large,
+  },
 };
 
 const baseStyles: CSSObject = {
@@ -34,32 +39,19 @@ const baseStyles: CSSObject = {
   borderRadius: 4,
   cursor: 'pointer',
   textAlign: 'center',
-};
-
-export const variantStyles: {
-  [variant in NonNullable<ButtonProps['variant']>]: CSSObject | undefined;
-} = {
-  primary: undefined,
-  secondary: undefined,
-  outline: {
-    border: `1px solid ${tokens.colors.primary500}`,
-  },
+  fontSize: tokens.fontSizes.small,
+  fontWeight: tokens.fontWeights.semibold,
+  lineHeight: tokens.lineHeights.none,
 };
 
 export const getStyles = ({
   variant,
   size,
 }: Pick<ButtonProps, 'variant' | 'size'>): ReturnType<typeof css> => {
-  const backgroundColor = variant && mapVariantTobackgroundColor[variant];
-  const color = variant && mapVariantToColor[variant];
-  const padding = size && mapSizeToPadding[size];
-
   const styles = {
     ...baseStyles,
-    padding,
-    backgroundColor,
-    color,
     ...(variant && variantStyles[variant]),
+    ...(size && sizeStyles[size]),
   };
   return css(styles);
 };

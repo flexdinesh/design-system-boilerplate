@@ -1,5 +1,5 @@
+/** @jsxImportSource @emotion/react */
 import { Global } from '@emotion/react';
-import React from 'react';
 
 /* 
   Either directly import the css-reset.css file

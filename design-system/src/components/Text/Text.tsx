@@ -1,16 +1,24 @@
-import React from 'react';
-import Box from 'components/Box';
-import type { BoxProps } from 'components/Box';
+/** @jsxImportSource @emotion/react */
+import { useMemo } from 'react';
+import Box from '../Box';
+import type { BoxProps } from '../Box';
+import { getStyles } from './Text.styles';
 
 export type TextProps = BoxProps;
 
 const Text: React.FC<TextProps> = ({
   as = 'span',
-  color = 'body',
+  color = 'textBody',
   ...props
 }) => {
+  const styles = useMemo(() => {
+    return getStyles({
+      as,
+    });
+  }, [as]);
+
   return (
-    <Box as={as} {...props} color={color}>
+    <Box as={as} color={color} css={styles} {...props}>
       {props.children}
     </Box>
   );

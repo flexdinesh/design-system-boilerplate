@@ -7,8 +7,17 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "exports": {
+		".": "./dist/index.modern.js", 
+		"./components": "./dist/components.modern.js",
+		"./core": "./dist/core.modern.js",
+		"./hooks": "./dist/hooks.modern.js",
+		"./types": "./dist/types.modern.js",
+		"./util": "./dist/util.modern.js"
+	},
   "scripts": {
-    "build": "rimraf --no-glob ./dist && cross-env NODE_ENV=production microbundle src/*.ts --tsconfig ./tsconfig.build.json --jsx React.createElement --jsxFragment React.Fragment -f cjs,es --no-compress",
+    "buildx": "rimraf --no-glob ./dist && cross-env NODE_ENV=production microbundle src/*.ts --tsconfig ./tsconfig.build.json --jsx React.createElement --jsxFragment React.Fragment -f cjs,es --no-compress",
+    "build": "microbundle src/*.ts --tsconfig ./tsconfig.build.json --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx --compress",
     "build:react17jsx": "microbundle src/*.ts --tsconfig ./tsconfig.build.json --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx --compress",
     "dev": "microbundle watch --tsconfig ./tsconfig.build.json  --no-compress",
     "clean": "rimraf --no-glob ./dist ./tsconfig.tsbuildinfo ./node_modules/.cache",
@@ -25,6 +34,8 @@
     "@emotion/babel-plugin": "11.7.2",
     "@emotion/babel-preset-css-prop": "11.2.0",
     "@emotion/eslint-plugin": "^11.7.0",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@mdx-js/react": "1.6.22",
     "@storybook/addon-actions": "^6.4.13",
     "@storybook/addon-docs": "^6.4.13",
@@ -48,6 +59,7 @@
     "babel-loader": "8.2.3",
     "babel-plugin-macros": "3.1.0",
     "babel-plugin-polyfill-corejs3": "0.4.0",
+    "browser-assert": "^1.2.1",
     "core-js": "3.20.1",
     "cross-env": "7.0.3",
     "eslint": "8.5.0",
@@ -81,8 +93,6 @@
     "webpack": "5.65.0"
   },
   "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

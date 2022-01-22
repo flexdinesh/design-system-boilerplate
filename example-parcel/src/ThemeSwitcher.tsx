@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import type { FC } from 'react';
-import {Button, useToggleTheme} from 'design-system/dist';
+import { Button, useToggleTheme } from './design-system';
 
 const ThemeSwitcher: FC = () => {
   const { theme, toggleTheme } = useToggleTheme();

@@ -1,5 +1,6 @@
 import clone from 'just-clone';
 import set from 'just-safe-set';
+import { lineHeight } from 'styled-system';
 import { walkObject } from './object';
 
 // restricting token groups to be flat
@@ -20,6 +21,7 @@ type CreatedTheme<
   : never;
 
 const tokenKeysToSkip = ['name'];
+const numericTokenGrouns = ['fontWeights', 'lineHeights'];
 export const createTheme = <ThemeDef extends ThemeDefinition>(
   themeDefinition: ThemeDef
 ): CreatedTheme<ThemeDef> & {
@@ -33,6 +35,7 @@ export const createTheme = <ThemeDef extends ThemeDefinition>(
   // we assign css vars to token keys
   const theme = {} as CreatedTheme<ThemeDef>;
 
+  // Eg. { value: 'green', location: ['color', 'primary'], isLeaf: true }
   walkObject(themeDefinition, ({ value, location, isLeaf }) => {
     if (tokenKeysToSkip.includes(location[0])) {
       set(theme, location, value);
@@ -40,7 +43,13 @@ export const createTheme = <ThemeDef extends ThemeDefinition>(
     }
     if (isLeaf) {
       const cssVarName = `--theme-${location.join('-')}`;
-      const cssVarValue = typeof value === 'number' ? `${value}px` : value;
+      let cssVarValue = value;
+      if (
+        typeof value === 'number' &&
+        !location.some((l) => numericTokenGrouns.includes(l))
+      ) {
+        cssVarValue = `${value}px`;
+      }
       set(theme, location, `var(${cssVarName})`);
       __cssVars[cssVarName] = cssVarValue;
     }

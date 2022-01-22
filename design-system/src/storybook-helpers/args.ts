@@ -1,4 +1,4 @@
-import { tokens } from 'core/theme';
+import { tokens } from '../core/theme';
 
 export const args = {
   backgroundColor: {

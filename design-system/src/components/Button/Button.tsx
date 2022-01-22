@@ -1,6 +1,7 @@
-import React from 'react';
-import Box from 'components/Box';
-import type { BoxProps } from 'components/Box';
+/** @jsxImportSource @emotion/react */
+import { useMemo } from 'react';
+import Box from '../Box';
+import type { BoxProps } from '../Box';
 import { getStyles } from './Button.styles';
 
 export type ButtonProps = Omit<BoxProps, 'size'> & {
@@ -11,7 +12,7 @@ export type ButtonProps = Omit<BoxProps, 'size'> & {
 const Button: React.FC<ButtonProps> = (props) => {
   const { children, variant = 'primary', size = 'medium', ...rest } = props;
 
-  const styles = React.useMemo(() => {
+  const styles = useMemo(() => {
     return getStyles({
       variant,
       size,

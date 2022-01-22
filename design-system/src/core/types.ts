@@ -12,7 +12,7 @@ import type {
   TypographyProps,
   ZIndexProps,
 } from 'styled-system';
-import { themes, tokens } from 'core/theme';
+import { themes, tokens } from '../core/theme';
 
 /* all themes have the same token keys */
 export type Themes = typeof themes;

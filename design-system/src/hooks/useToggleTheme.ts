@@ -1,6 +1,6 @@
 import React from 'react';
-import { themes } from 'core/theme';
-import { isBrowser } from 'util/helpers';
+import { themes } from '../core/theme';
+import { isBrowser } from '../util/helpers';
 
 /* just the theme name is enough since all theme css vars are already inserted into stylesheet */
 const themeNames = themes.map((t) => t.name);

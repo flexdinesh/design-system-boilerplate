@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -17,9 +18,9 @@
     "typescript": "^4.5.4"
   },
   "scripts": {
-    "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html",
-    "clean": "rm -rf dist"
+    "dev": "parcel public/index.html --cache-dir .parcel-cache",
+    "build": "parcel build public/index.html --cache-dir .parcel-cache",
+    "clean": "rimraf --no-glob ./dist ./.parcel-cache ./tsconfig.tsbuildinfo ./node_modules/.cache"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {

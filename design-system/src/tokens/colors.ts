@@ -22,11 +22,12 @@ const light = {
   secondary900: '#0b0b16',
 
   background: '#fffffe',
-  heading: '#094067',
-  body: '#5f6c7b',
-  alternate: '#fffffe',
+  textHeading: '#094067',
+  textBody: '#5f6c7b',
+  textAlternate: '#fffffe',
 };
 
+// https://www.happyhues.co/palettes/14
 const yellow = {
   primary50: '#fffbda',
   primary100: '#fff3ad',
@@ -51,11 +52,12 @@ const yellow = {
   secondary900: '#0b0b16',
 
   background: '#fffffe',
-  heading: '#272343',
-  body: '#2d334a',
-  alternate: '#272343',
+  textHeading: '#272343',
+  textBody: '#2d334a',
+  textAlternate: '#272343',
 };
 
+// https://www.happyhues.co/palettes/11
 const brown = {
   primary50: '#fcf2e4',
   primary100: '#e5dcca',
@@ -80,11 +82,12 @@ const brown = {
   secondary900: '#0b0b16',
 
   background: '#f9f4ef',
-  heading: '#020826',
-  body: '#716040',
-  alternate: '#fffffe',
+  textHeading: '#020826',
+  textBody: '#716040',
+  textAlternate: '#fffffe',
 };
 
+// https://www.happyhues.co/palettes/4
 const dark = {
   primary50: '#eee7ff',
   primary100: '#c9b8fc',
@@ -109,9 +112,9 @@ const dark = {
   secondary900: '#0b0b16',
 
   background: '#16161a',
-  heading: '#fffffe',
-  body: '#94a1b2',
-  alternate: '#fffffe',
+  textHeading: '#fffffe',
+  textBody: '#94a1b2',
+  textAlternate: '#fffffe',
 };
 
 export { light, yellow, brown, dark };

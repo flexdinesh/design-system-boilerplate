@@ -1,5 +1,5 @@
+/** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
-import React from 'react';
 import type { ComponentProps } from 'react';
 import {
   border,
@@ -16,7 +16,7 @@ import {
   space,
   zIndex,
 } from 'styled-system';
-import { tokens } from 'core/theme';
+import { tokens } from '../../core/theme';
 import type {
   ThemeBordersProps,
   ThemeColorProps,
@@ -29,7 +29,7 @@ import type {
   ThemeShadowProps,
   ThemeSpaceProps,
   ThemeZIndexProps,
-} from 'core/types';
+} from '../../core/types';
 
 interface Props
   extends ThemeBordersProps,
@@ -45,12 +45,6 @@ interface Props
     ThemeZIndexProps {
   children: React.ReactNode;
 }
-
-// const Box = styled.div<Props>`
-//   ${space}
-//   ${color}
-//   ${layout}
-// `;
 
 const Box = styled('div')<Props>(
   border,
@@ -68,7 +62,7 @@ const Box = styled('div')<Props>(
   zIndex,
   {
     fontFamily: tokens.fontFamily.body,
-    color: tokens.colors.body,
+    color: tokens.colors.textBody,
   }
 );
 

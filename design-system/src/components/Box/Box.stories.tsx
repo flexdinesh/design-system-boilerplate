@@ -1,7 +1,8 @@
+/** @jsxImportSource @emotion/react */
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import Box from 'components/Box';
-import { args } from 'util/storybook';
-import { StorybookThemeWrapper } from 'util/storybook-templates';
+import { args } from '../../storybook-helpers/args';
+import { StorybookThemeWrapper } from '../../storybook-helpers/StorybookThemeWrapper';
 
 export default {
   title: 'Components/Box',
