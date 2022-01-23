@@ -45,13 +45,13 @@ describe('util/theme', () => {
       },
 
       __cssVars: {
-        '--theme-breakpoints-small': 0,
+        '--theme-breakpoints-small': '0px',
         '--theme-breakpoints-medium': '22em',
         '--theme-colors-primary00': '#aaa',
         '--theme-colors-white': 'white',
 
-        '--theme-space-small': 0,
-        '--theme-space-large': 12,
+        '--theme-space-small': '0px',
+        '--theme-space-large': '12px',
       },
     });
   });

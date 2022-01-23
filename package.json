@@ -11,15 +11,17 @@
     "boilerplate-nextjs"
   ],
   "scripts": {
-    "clean": "rimraf '.cache/*'",
-    "rm:nm": "rimraf '**/node_modules'",
+    "clean": "rimraf ./.parcel-cache '.cache/*'",
     "lint": "yarn workspace design-system lint && yarn workspace boilerplate-nextjs lint && yarn workspace boilerplate-cra lint",
     "typecheck": "yarn workspace website typecheck && yarn workspace api typecheck",
     "next:dev": "yarn workspace boilerplate-nextjs dev",
     "csr:dev": "yarn workspace example-parcel start"
   },
   "devDependencies": {
-    "rimraf": "3.0.2"
+    "@parcel/packager-ts": "^2.2.1",
+    "@parcel/transformer-typescript-types": "^2.2.1",
+    "rimraf": "3.0.2",
+    "typescript": ">=3.0.0"
   },
   "engines": {
     "node": "^14.13.1 || >=16.0.0",

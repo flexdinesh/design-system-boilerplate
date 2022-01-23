@@ -17,7 +17,8 @@
       {
         "name": "typescript-styled-plugin"
       }
-    ]
+    ],
+    "types": ["jest", "node"]
   },
   "exclude": ["dist"]
 }
