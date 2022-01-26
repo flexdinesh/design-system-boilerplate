@@ -6,16 +6,11 @@
     "url": "https://github.com/flexdinesh/design-system-boilerplate "
   },
   "workspaces": [
-    "design-system",
-    "example-parcel",
-    "boilerplate-nextjs"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
-    "clean": "rimraf ./.parcel-cache '.cache/*'",
-    "lint": "yarn workspace design-system lint && yarn workspace boilerplate-nextjs lint && yarn workspace boilerplate-cra lint",
-    "typecheck": "yarn workspace website typecheck && yarn workspace api typecheck",
-    "next:dev": "yarn workspace boilerplate-nextjs dev",
-    "csr:dev": "yarn workspace example-parcel start"
+    "clean": "rimraf ./.parcel-cache '.cache/*'"
   },
   "devDependencies": {
     "@parcel/packager-ts": "^2.2.1",

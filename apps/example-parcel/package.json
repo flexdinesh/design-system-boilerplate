@@ -1,0 +1,37 @@
+{
+  "name": "example-parcel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "parcel public/index.html --cache-dir .parcel-cache",
+    "build": "parcel build public/index.html --cache-dir .parcel-cache",
+    "clean": "rimraf --no-glob ./dist ./build ./.parcel-cache ./tsconfig.tsbuildinfo ./node_modules/.cache"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^17.0.10",
+    "@types/react-dom": "^17.0.11",
+    "@types/react": "^17.0.37",
+    "@unpublished/design-system": "0.0.1",
+    "eslint-config-react-app": "^7.0.0",
+    "react-dom": "^17.0.2",
+    "react": "^17.0.2",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-svg-react": "^2.2.1",
+    "parcel": "^2.2.1"
+  },
+  "// browserslist comment": "// https://github.com/parcel-bundler/parcel/issues/7101#issuecomment-998580495",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not ios_saf < 13"
+  ]
+}
