@@ -1,28 +1,18 @@
 /** @jsxImportSource @emotion/react */
-import {  Global } from '@emotion/react';
-import { CSSReset, ThemeProvider, themes, tokens } from './design-system';
-import ThemeSwitcher from './ThemeSwitcher';
-import Header from './Header';
+import Layout from 'src/components/Layout';
+import ThemeSwitcher from 'src/components/ThemeSwitcher';
+import Header from 'src/components/Header';
 import * as styles from './App.styles';
 
 const App = () => {
   return (
-    <div css={styles.app}>
-      <CSSReset />
-      <Global
-        styles={`
-          body {
-            background: ${tokens.colors.background};
-            transition: background 0.5s ease-out;
-          }
-      `}
-      />
-      <ThemeProvider themes={themes} defaultTheme="light">
-        <ThemeSwitcher />
+    <Layout>
+      <ThemeSwitcher />
+      <div css={styles.app}>
         <Header />
         <main css={{ height: '100%' }}></main>
-      </ThemeProvider>
-    </div>
+      </div>
+    </Layout>
   );
 };
 

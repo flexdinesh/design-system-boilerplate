@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import type { FC } from 'react';
-import { Button, useToggleTheme } from './design-system';
+import { Button, useToggleTheme } from 'src/design-system';
 
 const ThemeSwitcher: FC = () => {
   const { theme, toggleTheme } = useToggleTheme();
@@ -13,7 +13,7 @@ const ThemeSwitcher: FC = () => {
         right: 0,
       }}
     >
-      <Button margin="medium" onClick={toggleTheme}>
+      <Button css={{margin: '1rem 2rem'}} onClick={toggleTheme}>
         Theme: {theme}
       </Button>
     </div>

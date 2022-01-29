@@ -14,8 +14,9 @@ const fontWeights = {
 };
 
 const fontFamily = {
-  body: 'Ivert, sans-serif',
-  heading: 'Ivert, sans-serif',
+  body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;',
+  heading:
+    '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;',
 };
 
 const lineHeights = {

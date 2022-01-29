@@ -141,13 +141,17 @@ const ThemeWrapper: React.FC<ThemeWrapperProps> = ({
   return (
     <>
       <Global styles={globalCssVariablesForAllThemes} />
-      <Global
+      {/* This is where we'd import CDN fonts */}
+      {/* <Global
         styles={`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+      `}
+      /> */}
+      <Global
+        styles={`
           body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-              'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-              sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+              Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
           }
