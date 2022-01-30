@@ -27,6 +27,8 @@ The design system follows a set of constraints that allows us to statically comp
 - Theme definitions are automatically converted to css variables using the `createTheme` utility.
 - The generated css variables are theme-name scoped in `ThemeProvider`.
 
+This is how the generated css variables are inserted into the global stylesheet —
+
 ```
 body[data-theme="light"] {
   --theme-colors-primary: blue;
@@ -40,9 +42,9 @@ body[data-theme="dark"] {
 
 ### Stack
 
-- Components are styled using emotion
-- Theme defitions are based on system ui theme specification
-- Box and Text components are created using styled-system + emotion ThemeProvider
+- Components are styled using [Emotion](https://emotion.sh/docs/introduction)
+- Theme defitions are based on [System UI Theme Specification](https://system-ui.com/theme/)
+- Box and Text components are created using [Styled System](https://styled-system.com/)
 
 ### Server rendering themes
 
@@ -70,7 +72,7 @@ const Example = () => {
 
 #### Getting current theme name
 
-Getting current theme is as simple as querying the DOM attribute. You don't need Context or fancy hooks to provide you the value. Although you do have a hook if you need — `useTheme`.
+Getting current theme is as simple as querying the DOM attribute. You don't need Context or fancy hooks to provide you the value. Although you can use a context based hook if you need — `useTheme`.
 
 ```
 const themeName = document.body.getAttribute(`data-theme`)
