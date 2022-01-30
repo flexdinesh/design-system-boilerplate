@@ -76,7 +76,7 @@ And the css variable `--theme-colors-primary` value is scoped based on the data 
 
 Theming is completely css driven. All themes are statically defined as css variables. Current theme is decided based on html attribute on body element. Eg. `<body data-theme="light">`. So server rendering themes is just a matter of rendering the right theme name as body attribute.
 
-### Example themeing usage
+### Example theme usage
 
 #### Using tokens
 
