@@ -23,6 +23,40 @@ A strongly typed opinionated design system based on system ui theme specificatio
 
 Theming is completely css driven. All themes are statically defined as css variables. Current theme is decided based on html attribute on body element. Eg. `<body data-theme="light">`. So server rendering themes is just a matter of rendering the right theme name as body attribute.
 
+### Example themeing usage
+
+#### Using tokens
+
+```
+const Example = () => {
+  return (
+    <div
+      css={{
+        backgroundColor: tokens.colors.primary100,
+      }}
+    >
+      Hello World
+    </div>
+  );
+};
+```
+
+#### Getting current theme name
+
+Getting current theme is as simple as querying the DOM attribute. You don't need Context or fancy hooks to provide you the value. Although you do have a hook if you need — `useTheme`.
+
+```
+const themeName = document.body.getAttribute(`data-theme`)
+```
+
+#### Switching theme
+
+Switching theme is as simple as setting the theme name on body element. Since themes are completely css driven, themes can be changed without re-rendering the whole tree.
+
+```
+document.body.setAttribute(`data-theme`, "dark");
+```
+
 ## License
 
 MIT © [Dinesh Pandiyan](https://github.com/flexdinesh)
