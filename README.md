@@ -27,18 +27,33 @@ Theming is completely css driven. All themes are statically defined as css varia
 
 #### Using tokens
 
+All themes use the same css variable names as token values. So you can define the styles statically without needing runtime theme prop.
+
 ```
 const Example = () => {
   return (
     <div
       css={{
-        backgroundColor: tokens.colors.primary100,
+        backgroundColor: tokens.colors.primary,
       }}
     >
       Hello World
     </div>
   );
 };
+```
+
+How does that work? css variables names are theme name scoped.
+
+```
+body[data-theme="light"] {
+  --theme-colors-primary: blue;
+  --theme-colors-secondary: lightblue;
+}
+body[data-theme="dark"] {
+  --theme-colors-primary: green;
+  --theme-colors-secondary: lightgreen;
+}
 ```
 
 #### Getting current theme name
