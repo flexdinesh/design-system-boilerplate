@@ -29,7 +29,7 @@ The design system follows a set of constraints that allows us to statically comp
 
 This is how the generated css variables are inserted into the global stylesheet —
 
-```
+```css
 body[data-theme="light"] {
   --theme-colors-primary: blue;
   --theme-colors-secondary: lightblue;
@@ -56,7 +56,7 @@ Theming is completely css driven. All themes are statically defined as css varia
 
 All themes use the same css variable names as token values. So you can define the styles statically without needing runtime theme prop.
 
-```
+```jsx
 const Example = () => {
   return (
     <div
@@ -74,7 +74,7 @@ const Example = () => {
 
 Getting current theme is as simple as querying the DOM attribute. You don't need Context or fancy hooks to provide you the value. Although you can use a context based hook if you need — `useTheme`.
 
-```
+```js
 const themeName = document.body.getAttribute(`data-theme`)
 ```
 
@@ -82,7 +82,7 @@ const themeName = document.body.getAttribute(`data-theme`)
 
 Switching theme is as simple as setting the theme name on body element. Since themes are completely css driven, themes can be changed without re-rendering the whole tree.
 
-```
+```js
 document.body.setAttribute(`data-theme`, "dark");
 ```
 
