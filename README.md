@@ -40,6 +40,32 @@ body[data-theme="dark"] {
 }
 ```
 
+So when you use a token in your component —
+
+```jsx
+const Example = () => {
+  return (
+    <div css={{ backgroundColor: tokens.colors.primary }}>
+      Hello World
+    </div>
+  );
+};
+```
+
+This is what is used as token value —
+
+```jsx
+const Example = () => {
+  return (
+    <div css={{ backgroundColor: 'var(--theme-colors-primary)' }}>
+      Hello World
+    </div>
+  );
+};
+```
+
+And the css variable `--theme-colors-primary` value is scoped based on the data attribute in body element — `<body data-theme="light">`
+
 ### Stack
 
 - Components are styled using [Emotion](https://emotion.sh/docs/introduction)
@@ -59,11 +85,7 @@ All themes use the same css variable names as token values. So you can define th
 ```jsx
 const Example = () => {
   return (
-    <div
-      css={{
-        backgroundColor: tokens.colors.primary,
-      }}
-    >
+    <div css={{ backgroundColor: tokens.colors.primary }}>
       Hello World
     </div>
   );
