@@ -20,7 +20,7 @@ The design system follows a set of constraints that allows us to statically comp
 
 - All themes should have the same set of tokens. Eg. dark theme cannot have a token that's not available in light theme.
 
-- Theming is driven using CSS custom properties (variables). This allows all themes to have the same token values which makes it easy to switch or server render themes. Eg. `token.colors.primary` has the same css variable across themes and makes it easy to statically define styles instead of defining the styles during runtime based on theme. `background: ${tokens.colors.primary}` instead of `background: ${(prop) => prop.theme.colors.primary}`.
+- Theming is driven using CSS custom properties (variables). This makes it easy to switch or server render themes without runtime concerns. Eg. `token.colors.primary` has the same css variable across themes and makes it easy to statically define styles instead of defining the styles during runtime based on theme. `background: ${tokens.colors.primary}` instead of `background: ${(prop) => prop.theme.colors.primary}`.
 
 ### How does theming work?
 
