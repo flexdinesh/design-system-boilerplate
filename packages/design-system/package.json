@@ -23,7 +23,7 @@
     "test": "run-s 'test:*'",
     "test:unit": "jest --config jest.config.js --maxWorkers=50% --color $@",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook --output-dir build/storybook"
+    "build:storybook": "build-storybook --output-dir build/storybook"
   },
   "devDependencies": {
     "@babel/core": "7.16.5",
@@ -31,13 +31,13 @@
     "@emotion/babel-preset-css-prop": "11.2.0",
     "@emotion/eslint-plugin": "^11.7.0",
     "@parcel/transformer-svg-react": "^2.2.1",
-    "@storybook/addon-actions": "^6.4.13",
-    "@storybook/addon-docs": "^6.4.13",
-    "@storybook/addon-essentials": "^6.4.13",
-    "@storybook/addon-links": "^6.4.13",
+    "@storybook/addon-actions": "^6.4.16",
+    "@storybook/addon-docs": "^6.4.16",
+    "@storybook/addon-essentials": "^6.4.16",
+    "@storybook/addon-links": "^6.4.16",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addon-storysource": "^6.4.13",
-    "@storybook/react": "^6.4.13",
+    "@storybook/addon-storysource": "^6.4.16",
+    "@storybook/react": "^6.4.16",
     "@testing-library/jest-dom": "5.16.1",
     "@testing-library/react-hooks": "7.0.2",
     "@testing-library/react": "12.1.2",
