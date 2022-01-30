@@ -7,7 +7,7 @@ import {
   fontFamily,
   lineHeights,
 } from '../tokens/typography';
-import { createTheme } from '../util/theme';
+import { createTheme } from '../util/create-theme';
 
 /* light mode - default */
 const light = createTheme({

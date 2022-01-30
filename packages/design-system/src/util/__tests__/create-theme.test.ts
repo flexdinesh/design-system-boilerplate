@@ -1,4 +1,4 @@
-import { createTheme } from '../theme';
+import { createTheme } from '../create-theme';
 
 describe('util/theme', () => {
   it('createTheme', () => {
