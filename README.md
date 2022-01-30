@@ -9,9 +9,9 @@ A strongly typed opinionated design system based on system ui theme specificatio
 ### Principles
 
 - Predefine all your themes. i.e no runtime theme creation. This allows us to statically define themes using css variables and create strongly typed themes. Strong types help with full autocomplete support in component APIs.
-- Token groups are identified and based on theme ui specification.
-- Keep your token groups flat. Don't nest your tokens within token groups. Eg. `color.primary` is allowed. `color.primary.success` is not allowed.
-- Theming is driven using CSS custom properties (variables). This allows all themes to have the same tokens values which makes it easy to switch or server render themes. Eg. `token.color.primary` has the same css variable across themes and makes it easy to statically define styles instead of defining the styles during runtime based on theme. `background: ${tokens.color.primary}` instead of `background: ${(prop) => prop.theme.color.primary}`.
+- Token groups are identified and based on theme ui specification. Eg. `colors`, `space`, `fontSizes`, etc.
+- Keep your token groups flat. Don't nest your tokens within token groups. Eg. `colors.primary` is allowed. `colors.primary.success` is not allowed.
+- Theming is driven using CSS custom properties (variables). This allows all themes to have the same tokens values which makes it easy to switch or server render themes. Eg. `token.colors.primary` has the same css variable across themes and makes it easy to statically define styles instead of defining the styles during runtime based on theme. `background: ${tokens.colors.primary}` instead of `background: ${(prop) => prop.theme.colors.primary}`.
 
 ### Stack
 
