@@ -1,3 +1,7 @@
+/* 
+  Importing the design system imports from a local file because I keep changing 
+  how the local package is linked and it's easier to change all the import statements in one file 
+*/
 import {
     CSSReset,
     ThemeProvider,
