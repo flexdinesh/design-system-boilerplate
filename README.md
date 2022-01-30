@@ -1,0 +1,28 @@
+# Design System Boilerplate
+
+Boilerplate monorepo setup with the design system as an internal package and two example apps using the monorepo.
+
+## Design System
+
+A strongly typed opinionated design system based on system ui theme specification and styled system component API.
+
+### Principles
+
+- Predefine all your themes. i.e no runtime theme creation. This allows us to statically define themes using css variables and create strongly typed themes. Strong types help with full autocomplete support in component APIs.
+- Token groups are identified and based on theme ui specification.
+- Keep your token groups flat. Don't nest your tokens within token groups. Eg. `color.primary` is allowed. `color.primary.success` is not allowed.
+- Theming is driven using CSS custom properties (variables). This allows all themes to have the same tokens values which makes it easy to switch or server render themes. Eg. `token.color.primary` has the same css variable across themes and makes it easy to statically define styles instead of defining the styles during runtime based on theme. `background: ${tokens.color.primary}` instead of `background: ${(prop) => prop.theme.color.primary}`.
+
+### Stack
+
+- Components are styled using emotion
+- Theme defitions are based on system ui theme specification
+- Box and Text components are created using styled-system + emotion ThemeProvider
+
+### Server rendering themes
+
+Theming is completely css driven. All themes are statically defined as css variables. Current theme is decided based on html attribute on body element. Eg. `<body data-theme="light">`. So server rendering themes is just a matter of rendering the right theme name as body attribute.
+
+## License
+
+MIT © [Dinesh Pandiyan](https://github.com/flexdinesh)
