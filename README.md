@@ -69,7 +69,7 @@ And the css variable `--theme-colors-primary` value is scoped based on the data 
 ### Stack
 
 - Components are styled using [Emotion](https://emotion.sh/docs/introduction)
-- Theme defitions are based on [System UI Theme Specification](https://system-ui.com/theme/)
+- Theme definitions are based on [System UI Theme Specification](https://system-ui.com/theme/)
 - Box and Text components are created using [Styled System](https://styled-system.com/)
 
 ### Server rendering themes
