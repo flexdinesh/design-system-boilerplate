@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "parcel public/index.html --cache-dir .parcel-cache",
     "build": "parcel build public/index.html --cache-dir .parcel-cache",
-    "clean": "rimraf --no-glob ./dist ./build ./.parcel-cache ./tsconfig.tsbuildinfo ./node_modules/.cache"
+    "clean": "rimraf --no-glob ./dist ./build ./.parcel-cache ./tsconfig.tsbuildinfo ./node_modules/.cache",
+    "typecheck": "tsc --project ./tsconfig.json --noEmit"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -15,12 +16,12 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^17.0.10",
-    "@types/react-dom": "^17.0.11",
     "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
     "@unpublished/design-system": "0.0.1",
     "eslint-config-react-app": "^7.0.0",
-    "react-dom": "^17.0.2",
     "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "typescript": "^4.5.4"
   },
   "devDependencies": {

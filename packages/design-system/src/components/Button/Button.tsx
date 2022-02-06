@@ -5,7 +5,7 @@ import type { BoxProps } from '../Box/Box';
 import { getStyles } from './Button.styles';
 
 export type ButtonProps = Omit<BoxProps, 'size'> & {
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary';
   size?: 'small' | 'medium' | 'large';
 };
 

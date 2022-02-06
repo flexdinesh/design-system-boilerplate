@@ -1,17 +1,21 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import Image from 'next/image';
-
-import { Box, Text } from 'src/design-system';
-import logo from 'src/images/logo.svg';
+import { ThemeSwitcher } from 'src/components/theme-switcher';
+import { Box } from 'src/design-system';
 
 export const styles = {
   header: css`
     height: 6rem;
-    display: grid;
-    grid-template-columns: 8rem 1fr 8rem;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 0 0.5rem;
+    backdrop-filter: saturate(200%) blur(1ex);
+    background-image: radial-gradient(
+      ellipse at 50% 0,
+      hsla(210, 18%, 84%, 0.2) 0,
+      hsla(210, 18%, 84%, 0) 80%
+    );
   `,
   logo: css`
     pointer-events: none;
@@ -19,18 +23,10 @@ export const styles = {
   `,
 };
 
-const Header = () => {
+export const Header = () => {
   return (
     <Box as="header" css={styles.header}>
-      <Box as="div" css={styles.logo}>
-        <Image src={logo} width={64} height={64} />
-      </Box>
-
-      <Text as="h1" css={{ textAlign: 'center' }}>
-        Design System Boilerplate
-      </Text>
+      <ThemeSwitcher />
     </Box>
   );
 };
-
-export default Header;

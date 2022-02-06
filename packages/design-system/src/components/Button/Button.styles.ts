@@ -8,15 +8,14 @@ export const variantStyles: {
   primary: {
     backgroundColor: tokens.colors.primary500,
     color: tokens.colors.textAlternate,
+    borderColor: tokens.colors.backgroundAlternate,
+    boxShadow: `${tokens.colors.backgroundAlternate} 4px 4px 0 0`,
   },
   secondary: {
     backgroundColor: tokens.colors.secondary500,
     color: tokens.colors.textAlternate,
-  },
-  outline: {
-    backgroundColor: 'transparent',
-    color: tokens.colors.primary500,
-    border: `1px solid ${tokens.colors.primary500}`,
+    borderColor: tokens.colors.backgroundAlternate,
+    boxShadow: `${tokens.colors.backgroundAlternate} 4px 4px 0 0`,
   },
 };
 
@@ -24,24 +23,42 @@ export const sizeStyles: {
   [variant in NonNullable<ButtonProps['size']>]: CSSObject;
 } = {
   small: {
-    padding: tokens.space.small,
+    minWidth: 80,
+    lineHeight: tokens.lineHeights.base,
+    fontSize: 16,
+    padding: `2px ${tokens.space.small}`,
   },
   medium: {
-    padding: tokens.space.medium,
+    minWidth: 120,
+    lineHeight: tokens.lineHeights.tall,
+    fontSize: 18,
+    padding: `4px ${tokens.space.medium}`,
   },
   large: {
-    padding: tokens.space.large,
+    minWidth: 148,
+    lineHeight: tokens.lineHeights.taller,
+    fontSize: 20,
+    padding: `8px ${tokens.space.large}`,
   },
 };
 
 const baseStyles: CSSObject = {
   minWidth: 96,
-  borderRadius: 4,
   cursor: 'pointer',
-  textAlign: 'center',
-  fontSize: tokens.fontSizes.small,
+  display: 'inline-block',
   fontWeight: tokens.fontWeights.semibold,
-  lineHeight: tokens.lineHeights.none,
+  textAlign: 'center',
+  textDecoration: 'none',
+  userSelect: 'none',
+  touchAction: 'manipulation',
+  border: '2px solid',
+
+  ':hover': {
+    transform: 'scale(1.05)',
+  },
+  ':active': {
+    transform: 'translate(2px, 2px)',
+  },
 };
 
 export const getStyles = ({

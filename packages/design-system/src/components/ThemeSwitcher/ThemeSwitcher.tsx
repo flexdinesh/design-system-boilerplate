@@ -13,8 +13,8 @@ export const ThemeSwitcher: FC = () => {
         top: 0,
         right: 0,
       }}>
-      <Button margin="medium" onClick={toggleTheme}>
-        Theme: {theme}
+      <Button size="small" margin="medium" onClick={toggleTheme}>
+        {theme}
       </Button>
     </div>
   );

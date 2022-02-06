@@ -1,7 +1,15 @@
+/** @jsxImportSource @emotion/react */
 import { Global } from '@emotion/react';
 import React from 'react';
-import { CSSReset, tokens } from '../design-system';
-import { Providers } from '../providers';
+import { CSSReset, ThemeProvider, themes, tokens } from '../../';
+
+const Providers: React.FC = ({ children }) => {
+  return (
+    <ThemeProvider themes={themes} defaultTheme="light">
+      {children}
+    </ThemeProvider>
+  );
+};
 
 export const Layout: React.FC = ({ children }) => {
   return (

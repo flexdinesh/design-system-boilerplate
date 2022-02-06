@@ -20,3 +20,4 @@ export { useToggleTheme } from './hooks/useToggleTheme';
 export { useTheme } from './components/ThemeProvider/ThemeProvider';
 
 /* Util */
+export { mediaQueries } from './tokens/breakpoints';

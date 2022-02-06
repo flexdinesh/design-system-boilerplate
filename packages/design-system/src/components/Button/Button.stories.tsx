@@ -24,7 +24,7 @@ const Template: ComponentStory<typeof Button> = (args) => {
         flexDirection="column">
         <Box
           width={'100%'}
-          height={80}
+          height={60}
           display="flex"
           css={{
             gap: 16,
@@ -32,14 +32,28 @@ const Template: ComponentStory<typeof Button> = (args) => {
           alignItems="center"
           justifyContent="center"
           backgroundColor={'background'}>
-          <Button {...args} variant="primary">
+          <Button {...args} size="small" variant="primary">
             Primary
           </Button>
-          <Button {...args} variant="secondary">
+          <Button {...args} size="small" variant="secondary">
             Secondary
           </Button>
-          <Button {...args} variant="outline">
-            Outline
+        </Box>
+        <Box
+          width={'100%'}
+          height={70}
+          display="flex"
+          css={{
+            gap: 16,
+          }}
+          alignItems="center"
+          justifyContent="center"
+          backgroundColor={'background'}>
+          <Button {...args} size="medium" variant="primary">
+            Primary
+          </Button>
+          <Button {...args} size="medium" variant="secondary">
+            Secondary
           </Button>
         </Box>
         <Box
@@ -57,9 +71,6 @@ const Template: ComponentStory<typeof Button> = (args) => {
           </Button>
           <Button {...args} size="large" variant="secondary">
             Secondary
-          </Button>
-          <Button {...args} size="large" variant="outline">
-            Outline
           </Button>
         </Box>
       </Box>

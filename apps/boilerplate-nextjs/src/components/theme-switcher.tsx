@@ -2,26 +2,16 @@
 import type { FC } from 'react';
 import { Button, useToggleTheme } from 'src/design-system';
 
-const ThemeSwitcher: FC = () => {
+export const ThemeSwitcher: FC = () => {
   const { theme, toggleTheme } = useToggleTheme();
 
   return (
-    <div
-      css={{
-        position: 'fixed',
-        top: 0,
-        right: 0,
-      }}
-    >
-      <Button css={{margin: '1rem 2rem'}} onClick={toggleTheme}>
-        Theme: {theme}
-      </Button>
-    </div>
+    <Button size="small" css={{}} onClick={toggleTheme}>
+      {theme}
+    </Button>
   );
 };
 
 if (process.env.NODE_ENV !== 'production') {
   ThemeSwitcher.displayName = 'ThemeSwitcher';
 }
-
-export default ThemeSwitcher;

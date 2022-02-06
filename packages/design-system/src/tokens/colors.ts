@@ -22,6 +22,7 @@ const light = {
   secondary900: '#0b0b16',
 
   background: '#fffffe',
+  backgroundAlternate: '#000f1f',
   textHeading: '#094067',
   textBody: '#5f6c7b',
   textAlternate: '#fffffe',
@@ -52,6 +53,7 @@ const yellow = {
   secondary900: '#0b0b16',
 
   background: '#fffffe',
+  backgroundAlternate: '#1c1600',
   textHeading: '#272343',
   textBody: '#2d334a',
   textAlternate: '#272343',
@@ -82,6 +84,7 @@ const brown = {
   secondary900: '#0b0b16',
 
   background: '#f9f4ef',
+  backgroundAlternate: '#140e00',
   textHeading: '#020826',
   textBody: '#716040',
   textAlternate: '#fffffe',
@@ -112,6 +115,7 @@ const dark = {
   secondary900: '#0b0b16',
 
   background: '#16161a',
+  backgroundAlternate: '#fffffe',
   textHeading: '#fffffe',
   textBody: '#94a1b2',
   textAlternate: '#fffffe',

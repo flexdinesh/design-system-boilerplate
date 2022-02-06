@@ -9,9 +9,6 @@
     "apps/*",
     "packages/*"
   ],
-  "scripts": {
-    "clean": "rimraf ./.parcel-cache '.cache/*'"
-  },
   "devDependencies": {
     "@parcel/packager-ts": "^2.2.1",
     "@parcel/transformer-typescript-types": "^2.2.1",

@@ -11,6 +11,7 @@ import {
 } from '@unpublished/design-system';
 import { themes, tokens } from '@unpublished/design-system';
 import { useToggleTheme } from '@unpublished/design-system';
+import { mediaQueries } from '@unpublished/design-system';
 import type { Tokens } from '@unpublished/design-system';
 
 export {
@@ -22,6 +23,7 @@ export {
   Text,
   themes,
   tokens,
+  mediaQueries,
 };
 
 export type { Tokens };

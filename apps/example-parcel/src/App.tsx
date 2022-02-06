@@ -1,19 +1,10 @@
-/** @jsxImportSource @emotion/react */
-import Layout from 'src/components/Layout';
-import ThemeSwitcher from 'src/components/ThemeSwitcher';
-import Header from 'src/components/Header';
-import * as styles from './App.styles';
+import { Layout } from './components/layout';
+import { Home } from './pages/home/home';
 
-const App = () => {
+export const App = () => {
   return (
     <Layout>
-      <ThemeSwitcher />
-      <div css={styles.app}>
-        <Header />
-        <main css={{ height: '100%' }}></main>
-      </div>
+      <Home />
     </Layout>
   );
 };
-
-export default App;

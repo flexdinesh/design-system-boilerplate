@@ -1,4 +1,4 @@
-/*
+2/*
   0em = 0px
   40em = 640px
   52em = 832px
@@ -18,8 +18,8 @@ const breakpoints = {
 
 // media queries
 const mediaQueries = {
-  medium: `@media screen and (min-width: ${breakpointScale[0]})`,
-  large: `@media screen and (min-width: ${breakpointScale[1]})`,
+  medium: `@media screen and (min-width: ${breakpointScale[1]})`,
+  large: `@media screen and (min-width: ${breakpointScale[2]})`,
 };
 
 export { breakpoints, mediaQueries };

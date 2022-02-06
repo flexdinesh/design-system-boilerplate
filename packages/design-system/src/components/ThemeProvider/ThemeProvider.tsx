@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { ThemeProvider as EmotionThemeProvider, Global } from '@emotion/react';
+import React from 'react';
 import {
   createContext,
   useState,
@@ -139,7 +140,7 @@ const ThemeWrapper: React.FC<ThemeWrapperProps> = ({
   const theme = themes[0];
 
   return (
-    <>
+    <React.Fragment>
       <Global styles={globalCssVariablesForAllThemes} />
       {/* This is where we'd import CDN fonts */}
       {/* <Global
@@ -158,7 +159,7 @@ const ThemeWrapper: React.FC<ThemeWrapperProps> = ({
       `}
       />
       <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
-    </>
+    </React.Fragment>
   );
 };
 
@@ -173,11 +174,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
 }) => {
   return (
-    <>
+    <React.Fragment>
       <ThemeWrapper themes={themes} defaultTheme={defaultTheme}>
         <ContextWrapper defaultTheme={defaultTheme}>{children}</ContextWrapper>
       </ThemeWrapper>
-    </>
+    </React.Fragment>
   );
 };
 if (process.env.NODE_ENV !== 'production') {

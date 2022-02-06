@@ -19,7 +19,12 @@
     "paths": {
       "@design-system/*": ["../design-system/dist/*"],
       "@design-system": ["../design-system/dist/index"]
-    }
+    },
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ],
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", ".next"]
