@@ -5,18 +5,17 @@ import { Box } from 'src/design-system';
 
 export const styles = {
   header: css`
-    height: 6rem;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 0.5rem;
-    backdrop-filter: saturate(200%) blur(1ex);
-    background-image: radial-gradient(
-      ellipse at 50% 0,
-      hsla(210, 18%, 84%, 0.2) 0,
-      hsla(210, 18%, 84%, 0) 80%
-    );
-  `,
+    padding: 0 1rem;
+    backdrop-filter: blur(1px);
+    `,
   logo: css`
     pointer-events: none;
     justify-self: center;

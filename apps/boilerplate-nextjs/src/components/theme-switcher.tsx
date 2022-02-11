@@ -6,7 +6,7 @@ export const ThemeSwitcher: FC = () => {
   const { theme, toggleTheme } = useToggleTheme();
 
   return (
-    <Button size="small" css={{}} onClick={toggleTheme}>
+    <Button size="small" onClick={toggleTheme}>
       {theme}
     </Button>
   );

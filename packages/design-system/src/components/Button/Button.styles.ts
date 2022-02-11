@@ -30,13 +30,13 @@ export const sizeStyles: {
   },
   medium: {
     minWidth: 120,
-    lineHeight: tokens.lineHeights.tall,
+    lineHeight: tokens.lineHeights.body,
     fontSize: 18,
     padding: `4px ${tokens.space.medium}`,
   },
   large: {
     minWidth: 148,
-    lineHeight: tokens.lineHeights.taller,
+    lineHeight: tokens.lineHeights.body,
     fontSize: 20,
     padding: `8px ${tokens.space.large}`,
   },

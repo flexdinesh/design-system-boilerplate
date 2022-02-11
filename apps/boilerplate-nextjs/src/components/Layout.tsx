@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
+import React from 'react';
 import { Global } from '@emotion/react';
 import { CSSReset, tokens } from 'src/design-system';
 import Providers from 'src/providers';
 import Meta from 'src/components/meta';
-import React from 'react';
 
 export const Layout: React.FC = ({ children }) => {
   return (
@@ -15,6 +15,7 @@ export const Layout: React.FC = ({ children }) => {
           body {
             background: ${tokens.colors.background};
             transition: background 0.5s ease-out;
+            font-size: 1.125rem;
           }
       `}
       />

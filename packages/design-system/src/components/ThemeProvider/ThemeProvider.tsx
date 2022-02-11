@@ -12,6 +12,7 @@ import {
 import { themes } from '../../core/theme';
 import type { Themes } from '../../core/types';
 import { isBrowser } from '../../util/helpers';
+import { globalBaseStyles } from './global-styles';
 
 /* just the theme name is enough since all theme css vars are already inserted into stylesheet */
 const themeNames = themes.map((t) => t.name);
@@ -148,16 +149,7 @@ const ThemeWrapper: React.FC<ThemeWrapperProps> = ({
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
       `}
       /> */}
-      <Global
-        styles={`
-          body {
-            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-              Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
-      `}
-      />
+      <Global styles={globalBaseStyles} />
       <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
     </React.Fragment>
   );

@@ -9,45 +9,39 @@ export const styles = {
     align-items: center;
     justify-content: center;
     padding: 0 0.5rem;
+    margin: 2rem 0 0;
   `,
-  wrapper: css`
+  title: css`
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 1px solid cornflowerblue;
+    letter-spacing: -0.05em;
+    padding: 1rem;
+    border-color: ${tokens.colors.primary500};
+    box-shadow: ${tokens.colors.primary500} 4px 4px 0 0;
   `,
 };
 
 export const Intro = () => {
   return (
     <Box as="div" css={styles.container}>
-      <Box as="div" css={styles.wrapper}>
-        <Text
-          as="div"
+      <Text as="h1" css={styles.title}>
+        <div>A Design System Template</div>
+        <div
           css={css`
-            font-size: 48px;
-            font-weight: ${tokens.fontWeights.semibold};
-            ${mediaQueries.medium} {
-              font-size: 64px;
-            }
+            background-image: linear-gradient(
+              135deg,
+              ${tokens.colors.primary500},
+              ${tokens.colors.primary200}
+            );
+            background-clip: text;
+            color: transparent;
           `}
         >
-          A design system template
-        </Text>
-        <Text
-          as="div"
-          css={css`
-            font-size: 48px;
-            font-weight: ${tokens.fontWeights.extrabold};
-            color: ${tokens.colors.primary500};
-            ${mediaQueries.medium} {
-              font-size: 64px;
-            }
-          `}
-        >
-          that scales
-        </Text>
-      </Box>
+          That Scales.
+        </div>
+      </Text>
     </Box>
   );
 };

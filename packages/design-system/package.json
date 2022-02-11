@@ -14,7 +14,7 @@
     "directory": "packages/design-system"
   },
   "scripts": {
-    "dev": "parcel --cache-dir .parcel-cache",
+    "dev": "parcel watch --cache-dir .parcel-cache",
     "build": "parcel build  --cache-dir .parcel-cache",
     "clean": "rimraf --no-glob ./dist ./build ./.parcel-cache ./tsconfig.tsbuildinfo ./node_modules/.cache ",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
@@ -67,7 +67,7 @@
     "eslint": "8.5.0",
     "jest": "27.4.5",
     "npm-run-all": "4.1.5",
-    "parcel": "^2.2.1",
+    "parcel": "^2.3.1",
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
     "ts-jest": "27.1.2",
@@ -79,7 +79,7 @@
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
-    "@parcel/transformer-react-refresh-wrap": "^2.2.1",
+    "@parcel/transformer-react-refresh-wrap": "^2.3.1",
     "@swc/helpers": "^0.3.2",
     "just-clone": "^5.0.1",
     "just-safe-set": "^4.0.2",

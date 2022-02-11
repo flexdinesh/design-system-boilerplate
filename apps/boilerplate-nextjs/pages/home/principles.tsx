@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { Box, Text } from 'src/design-system';
+import PrinciplesMDX from './principles.mdx';
 
 export const styles = {
   container: css`
@@ -11,9 +12,8 @@ export const styles = {
 export const Principles = () => {
   return (
     <Box as="div" css={styles.container}>
-      <Text as="h2" css={{}}>
-        Principles
-      </Text>
+      <Text as="h2">Principles</Text>
+      <PrinciplesMDX />
     </Box>
   );
 };

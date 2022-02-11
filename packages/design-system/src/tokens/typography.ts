@@ -1,5 +1,5 @@
 const fontSizeScale = [12, 14, 16, 20, 24, 32] as const;
-const fontWeightScale = [400, 600, 800];
+const fontWeightScale = [400, 600, 700];
 
 const fontSizes = {
   small: fontSizeScale[1],
@@ -14,7 +14,7 @@ const fontWeights = {
 };
 
 const fontFamily = {
-  body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;',
+  body: 'system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
   heading:
     '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;',
 };
@@ -22,11 +22,8 @@ const fontFamily = {
 const lineHeights = {
   normal: 'normal',
   none: 1,
-  shorter: 1.25,
-  short: 1.375,
   base: 1.5,
-  tall: 1.625,
-  taller: 2,
+  body: 1.7,
 };
 
 export { fontSizes, fontWeights, fontFamily, lineHeights };

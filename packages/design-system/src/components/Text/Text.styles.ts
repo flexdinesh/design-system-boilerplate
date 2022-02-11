@@ -1,5 +1,6 @@
 import { css, CSSObject } from '@emotion/react';
 import { tokens } from '../../core/theme';
+import * as stylePresets from '../../core/style-presets';
 import type { TextProps } from './Text';
 
 const HEADING_TAGS = ['h1', 'h2', 'h3', 'h4'];
@@ -8,30 +9,34 @@ export const mapHeadingToHeadingStyles: {
   [key in typeof HEADING_TAGS[number]]: CSSObject;
 } = {
   h1: {
-    lineHeight: tokens.lineHeights.tall,
+    color: tokens.colors.textHeading,
+    lineHeight: tokens.lineHeights.body,
     fontWeight: tokens.fontWeights.extrabold,
-    fontSize: 36,
+    fontSize: '4rem',
   },
   h2: {
-    lineHeight: tokens.lineHeights.tall,
+    color: tokens.colors.textHeading,
+    lineHeight: tokens.lineHeights.body,
     fontWeight: tokens.fontWeights.extrabold,
-    fontSize: 32,
+    fontSize: '2.5rem',
   },
   h3: {
-    lineHeight: tokens.lineHeights.tall,
+    color: tokens.colors.textHeading,
+    lineHeight: tokens.lineHeights.body,
     fontWeight: tokens.fontWeights.extrabold,
-    fontSize: 28,
+    fontSize: '2rem',
   },
   h4: {
-    lineHeight: tokens.lineHeights.tall,
+    color: tokens.colors.textHeading,
+    lineHeight: tokens.lineHeights.body,
     fontWeight: tokens.fontWeights.semibold,
-    fontSize: 24,
+    fontSize: '1.5rem',
   },
 };
 
 const baseStyles: CSSObject = {
-  lineHeight: tokens.lineHeights.base,
-  color: tokens.colors.textHeading,
+  lineHeight: tokens.lineHeights.body,
+  color: tokens.colors.textBody,
 };
 
 export const getStyles = ({

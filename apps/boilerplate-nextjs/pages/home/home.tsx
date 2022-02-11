@@ -17,16 +17,6 @@ const Home: NextPage = () => {
           <main css={styles.main}>
             <Intro />
             <Principles />
-            <pre>{`
-              <VideoPlayer 
-                ref="videoplayer" 
-                preload={this.props.preload} 
-                classes={this.props.classes} 
-                videoID={this.props.videoID}
-                controls="controls" 
-              />
-            `}</pre>
-            <code>{`const a === 'aaa`}</code>
           </main>
         </Page>
       </Box>
