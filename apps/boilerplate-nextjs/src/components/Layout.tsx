@@ -15,7 +15,6 @@ export const Layout: React.FC = ({ children }) => {
           body {
             background: ${tokens.colors.background};
             transition: background 0.5s ease-out;
-            font-size: 1.125rem;
           }
       `}
       />

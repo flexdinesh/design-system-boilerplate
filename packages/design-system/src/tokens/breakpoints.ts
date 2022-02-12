@@ -7,7 +7,7 @@
 */
 const breakpointScale = ['0em', '40em', '52em', '64em', '75em'] as const;
 
-// breakpoint tokens
+// breakpoint tokens - just demo values - find your right breakpoint
 const breakpoints = {
   // not having 'small' breakpoint forces us to build
   // for mobile devices and scale for bigger devices

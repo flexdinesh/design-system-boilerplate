@@ -2,7 +2,7 @@
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import { MDXProvider as MDXProviderImported } from '@mdx-js/react';
-import { Text, tokens } from 'src/design-system';
+import { Callout, Text, tokens } from 'src/design-system';
 import { theme } from './prism-theme';
 
 const CodeHighlight: React.FC<{ className: string; children: string }> = ({
@@ -23,7 +23,7 @@ const CodeHighlight: React.FC<{ className: string; children: string }> = ({
             boxShadow: `0 0 0 1px ${tokens.colors.border}`,
             fontFamily:
               'ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, Menlo, monospace',
-            fontSize: '0.875rem',
+            fontSize: tokens.fontSizes.small,
             maxWidth: '100%',
             overflow: 'auto',
             padding: 4,
@@ -59,13 +59,14 @@ const CodeHighlight: React.FC<{ className: string; children: string }> = ({
               ...{
                 background: tokens.colors.codeBg,
                 textShadow: 'none',
-                fontSize: '1rem',
+                fontSize: tokens.fontSizes.small,
               },
             }}
             css={{
               padding: '1rem',
               borderRadius: '3px',
               boxShadow: `0 0 0 1px ${tokens.colors.border}`,
+              overflow: 'auto',
               fontFamily:
                 'ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, Menlo, monospace',
               'span.token.operator': {
@@ -120,12 +121,20 @@ const P = (props: React.PropsWithChildren<{}>) => (
   </Text>
 );
 
+const Blockquote = (props: React.PropsWithChildren<{}>) => (
+  // @ts-ignore
+  <Callout variant="primary" spacing="default" css={{ p: { margin: 0 } }}>
+    {props.children}
+  </Callout>
+);
+
 const Li = (props: React.PropsWithChildren<{}>) => (
   <li
     {...props}
     css={{
       lineHeight: tokens.lineHeights.body,
       color: tokens.colors.textBody,
+      margin: '0.5rem 0',
     }}
   >
     {props.children}
@@ -140,6 +149,7 @@ const components = {
   p: P,
   li: Li,
   code: CodeHighlight,
+  blockquote: Blockquote,
 };
 
 export const MDXProvider: React.FC = ({ children }) => {

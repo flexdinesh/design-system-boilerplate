@@ -6,16 +6,18 @@ export const variantStyles: {
   [variant in NonNullable<ButtonProps['variant']>]: CSSObject;
 } = {
   primary: {
-    backgroundColor: tokens.colors.primary500,
+    backgroundColor: tokens.colors.primaryBase,
     color: tokens.colors.textAlternate,
-    borderColor: tokens.colors.backgroundAlternate,
-    boxShadow: `${tokens.colors.backgroundAlternate} 4px 4px 0 0`,
+    ':hover': {
+      backgroundColor: tokens.colors.primary400,
+    },
   },
   secondary: {
-    backgroundColor: tokens.colors.secondary500,
+    backgroundColor: tokens.colors.secondaryBase,
     color: tokens.colors.textAlternate,
-    borderColor: tokens.colors.backgroundAlternate,
-    boxShadow: `${tokens.colors.backgroundAlternate} 4px 4px 0 0`,
+    ':hover': {
+      backgroundColor: tokens.colors.secondary400,
+    },
   },
 };
 
@@ -24,40 +26,30 @@ export const sizeStyles: {
 } = {
   small: {
     minWidth: 80,
-    lineHeight: tokens.lineHeights.base,
-    fontSize: 16,
-    padding: `2px ${tokens.space.small}`,
   },
   medium: {
     minWidth: 120,
-    lineHeight: tokens.lineHeights.body,
-    fontSize: 18,
-    padding: `4px ${tokens.space.medium}`,
+    lineHeight: tokens.lineHeights.base,
   },
   large: {
     minWidth: 148,
     lineHeight: tokens.lineHeights.body,
-    fontSize: 20,
-    padding: `8px ${tokens.space.large}`,
   },
 };
 
 const baseStyles: CSSObject = {
-  minWidth: 96,
-  cursor: 'pointer',
-  display: 'inline-block',
+  border: 0,
+  borderRadius: tokens.radii.medium,
+  fontSize: tokens.fontSizes.small,
   fontWeight: tokens.fontWeights.semibold,
+  padding: '0.75rem 1rem',
   textAlign: 'center',
-  textDecoration: 'none',
+  cursor: 'pointer',
   userSelect: 'none',
   touchAction: 'manipulation',
-  border: '2px solid',
 
-  ':hover': {
-    transform: 'scale(1.05)',
-  },
   ':active': {
-    transform: 'translate(2px, 2px)',
+    transform: 'scale(0.96)',
   },
 };
 
@@ -70,5 +62,6 @@ export const getStyles = ({
     ...(variant && variantStyles[variant]),
     ...(size && sizeStyles[size]),
   };
+
   return css(styles);
 };

@@ -37,7 +37,7 @@ export const Intro = () => {
           css={css`
             font-size: 80px;
             font-weight: ${tokens.fontWeights.extrabold};
-            color: ${tokens.colors.primary500};
+            color: ${tokens.colors.primary300};
           `}>
           that scales
         </Text>

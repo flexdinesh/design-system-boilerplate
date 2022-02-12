@@ -1,6 +1,7 @@
 import { breakpoints, mediaQueries } from '../tokens/breakpoints';
 import * as colors from '../tokens/colors';
 import { space } from '../tokens/space';
+import { radii } from '../tokens/radii';
 import {
   fontSizes,
   fontWeights,
@@ -16,6 +17,21 @@ const light = createTheme({
   mediaQueries,
   colors: colors.light,
   space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
+/* orange mode  */
+const orange = createTheme({
+  name: 'orange',
+  breakpoints,
+  mediaQueries,
+  colors: colors.orange,
+  space,
+  radii,
   fontSizes,
   fontWeights,
   fontFamily,
@@ -29,6 +45,7 @@ const dark = createTheme({
   mediaQueries,
   colors: colors.dark,
   space,
+  radii,
   fontSizes,
   fontWeights,
   fontFamily,
@@ -42,6 +59,7 @@ const yellow = createTheme({
   mediaQueries,
   colors: colors.yellow,
   space,
+  radii,
   fontSizes,
   fontWeights,
   fontFamily,
@@ -55,6 +73,49 @@ const brown = createTheme({
   mediaQueries,
   colors: colors.brown,
   space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
+/* dark - pale orange mode */
+const paleOrange = createTheme({
+  name: 'pale orange',
+  breakpoints,
+  mediaQueries,
+  colors: colors.paleOrange,
+  space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
+/* dark - pale pink mode */
+const palePink = createTheme({
+  name: 'pale pink',
+  breakpoints,
+  mediaQueries,
+  colors: colors.palePink,
+  space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
+/* dark - bright orange mode */
+const brightOrange = createTheme({
+  name: 'bright orange',
+  breakpoints,
+  mediaQueries,
+  colors: colors.brightOrange,
+  space,
+  radii,
   fontSizes,
   fontWeights,
   fontFamily,
@@ -64,4 +125,13 @@ const brown = createTheme({
 /* since we only use css vars as token values - theme keys have the same values across themes */
 export const tokens = light;
 
-export const themes = [light, dark, yellow, brown];
+export const themes = [
+  light,
+  dark,
+  orange,
+  yellow,
+  paleOrange,
+  brown,
+  palePink,
+  brightOrange,
+];

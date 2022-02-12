@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { Box, Text, tokens, mediaQueries } from 'src/design-system';
+import { Box, Text, tokens } from 'src/design-system';
 
 export const styles = {
-  container: css`
+  intro: css`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,27 +12,29 @@ export const styles = {
     margin: 2rem 0 0;
   `,
   title: css`
+    width: 100%;
+    line-height: ${tokens.lineHeights.base};
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid cornflowerblue;
+    border: 1px solid;
     letter-spacing: -0.05em;
     padding: 1rem;
-    border-color: ${tokens.colors.primary600};
-    box-shadow: ${tokens.colors.primary600} 4px 4px 0 0;
+    border-color: ${tokens.colors.primaryBase};
+    box-shadow: ${tokens.colors.primaryBase} 4px 4px 0 0;
   `,
 };
 
 export const Intro = () => {
   return (
-    <Box as="div" css={styles.container}>
+    <Box as="div" css={styles.intro}>
       <Text as="h1" css={styles.title}>
         <div>A Design System Template</div>
         <div
           css={css`
             background-image: linear-gradient(
               135deg,
-              ${tokens.colors.primary600},
+              ${tokens.colors.primaryBase},
               ${tokens.colors.primary200}
             );
             background-clip: text;

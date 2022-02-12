@@ -4,6 +4,7 @@ export const globalBaseStyles = {
   '*, ::before, ::after': {
     boxSizing: 'border-box',
   },
+
   'html, body': {
     background: tokens.colors.background,
     color: tokens.colors.textBody,
@@ -15,6 +16,13 @@ export const globalBaseStyles = {
     WebkitTextSizeAdjust: 'none',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
+    fontSize: tokens.fontSizes.body,
+  },
+  strong: {
+    fontWeight: tokens.fontWeights.semibold,
+  },
+  em: {
+    fontStyle: 'italic',
   },
   a: {
     textDecoration: 'none',
@@ -22,8 +30,8 @@ export const globalBaseStyles = {
   },
   '::selection': {
     textShadow: 'none',
-    // color: 'var(--selection-text)',
-    // backgroundColor: 'var(--selection)',
+    color: tokens.colors.primary900,
+    backgroundColor: tokens.colors.primary100,
   },
   pre: {
     lineHeight: 1.4,
@@ -44,12 +52,15 @@ export const globalBaseStyles = {
   },
   '*:focus-visible, input:focus-visible, button:focus-visible, [type="submit"]:focus-visible':
     {
-      //   outline: '1px dashed var(--focus)',
+      outline: `1px dashed ${tokens.colors.link}`,
       outlineOffset: '3px',
     },
   'input:focus-visible': {
     outlineStyle: 'solid',
     outlineWidth: '3px',
     outlineOffset: 0,
+  },
+  li: {
+    listStyle: 'square',
   },
 } as const;

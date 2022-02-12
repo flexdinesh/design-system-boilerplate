@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import { StorybookThemeWrapper } from '../../storybook-helpers/StorybookThemeWrapper';
+import { StorybookLayout } from '../../storybook-helpers/StorybookLayout';
 import { Box } from '../Box/Box';
 import { Button } from './Button';
 
@@ -11,70 +11,44 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => {
   return (
-    <StorybookThemeWrapper>
+    <StorybookLayout>
       <Box
-        width={'100%'}
-        height={'100%'}
+        height={100}
         display="flex"
         css={{
-          gap: 16,
+          gap: 24,
         }}
         alignItems="center"
-        justifyContent="center"
-        flexDirection="column">
-        <Box
-          width={'100%'}
-          height={60}
-          display="flex"
-          css={{
-            gap: 16,
-          }}
-          alignItems="center"
-          justifyContent="center"
-          backgroundColor={'background'}>
-          <Button {...args} size="small" variant="primary">
-            Primary
-          </Button>
-          <Button {...args} size="small" variant="secondary">
-            Secondary
-          </Button>
-        </Box>
-        <Box
-          width={'100%'}
-          height={70}
-          display="flex"
-          css={{
-            gap: 16,
-          }}
-          alignItems="center"
-          justifyContent="center"
-          backgroundColor={'background'}>
-          <Button {...args} size="medium" variant="primary">
-            Primary
-          </Button>
-          <Button {...args} size="medium" variant="secondary">
-            Secondary
-          </Button>
-        </Box>
-        <Box
-          width={'100%'}
-          height={80}
-          display="flex"
-          css={{
-            gap: 16,
-          }}
-          alignItems="center"
-          justifyContent="center"
-          backgroundColor={'background'}>
-          <Button {...args} size="large" variant="primary">
-            Primary
-          </Button>
-          <Button {...args} size="large" variant="secondary">
-            Secondary
-          </Button>
-        </Box>
+        justifyContent="center">
+        <Button {...args} size="small">
+          Primary
+        </Button>
+        <Button {...args} size="medium">
+          Secondary
+        </Button>
+        <Button {...args} size="large">
+          Secondary
+        </Button>
       </Box>
-    </StorybookThemeWrapper>
+      <Box
+        height={100}
+        display="flex"
+        css={{
+          gap: 24,
+        }}
+        alignItems="center"
+        justifyContent="center">
+        <Button {...args} size="small" variant="secondary">
+          Primary
+        </Button>
+        <Button {...args} size="medium" variant="secondary">
+          Secondary
+        </Button>
+        <Button {...args} size="large" variant="secondary">
+          Secondary
+        </Button>
+      </Box>
+    </StorybookLayout>
   );
 };
 

@@ -8,6 +8,7 @@ import {
   Box,
   Button,
   Text,
+  Callout
 } from '@unpublished/design-system';
 import { themes, tokens } from '@unpublished/design-system';
 import { useToggleTheme } from '@unpublished/design-system';
@@ -21,6 +22,7 @@ export {
   Box,
   Button,
   Text,
+  Callout,
   themes,
   tokens,
   mediaQueries,
