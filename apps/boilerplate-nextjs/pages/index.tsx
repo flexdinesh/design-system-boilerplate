@@ -6,9 +6,9 @@ import { Layout } from 'src/components/layout';
 import { Page } from 'src/components/page';
 import { Header } from 'src/components/header';
 import { Footer } from 'src/components/footer';
-import { Intro } from './intro';
-import { About } from './about';
-import { ExampleComponents } from './example-components';
+import { Intro } from 'src/components/intro';
+import { About } from 'src/components/about';
+import { ExampleComponents } from 'src/components/example-components';
 
 const styles = {
   homePage: css`

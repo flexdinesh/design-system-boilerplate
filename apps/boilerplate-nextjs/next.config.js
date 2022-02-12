@@ -9,7 +9,8 @@ const withMDX = require('@next/mdx')({
     providerImportSource: '@mdx-js/react',
   },
 });
+
 module.exports = withMDX({
   reactStrictMode: true,
-  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
+  pageExtensions: ['ts', 'tsx'],
 });
