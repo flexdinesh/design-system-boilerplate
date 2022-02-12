@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import type { NextPage } from 'next';
 import { css } from '@emotion/react';
-import { Box } from 'src/design-system';
+import { Box, Callout } from 'src/design-system';
 import { Layout } from 'src/components/layout';
 import { Page } from 'src/components/page';
 import { Header } from 'src/components/header';
@@ -16,8 +16,17 @@ const styles = {
   `,
   main: css`
     height: 100%;
-    padding: 2rem 2rem;
+    padding: 0 2rem;
+    margin: 4rem 0 2rem;
   `,
+};
+
+const BrokenNote = () => {
+  return (
+    <Callout variant="secondary">
+      Emotion critical style extraction is broken at the moment!
+    </Callout>
+  );
 };
 
 const Home: NextPage = () => {
@@ -27,6 +36,7 @@ const Home: NextPage = () => {
         <Header />
         <Page>
           <main css={styles.main}>
+            <BrokenNote />
             <Intro />
             <About />
             <ExampleComponents />

@@ -9,7 +9,6 @@ export const styles = {
     align-items: center;
     justify-content: center;
     padding: 0 0.5rem;
-    margin: 2rem 0 0;
   `,
   title: css`
     width: 100%;

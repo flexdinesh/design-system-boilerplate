@@ -2567,6 +2567,14 @@
     "@parcel/plugin" "2.3.1"
     json5 "^2.2.0"
 
+"@parcel/transformer-mdx@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-mdx/-/transformer-mdx-2.3.1.tgz#58d2712090bfbeafb00c8007b101869cec12188a"
+  integrity sha512-RhLVqetkR8eNHBIXHk9vgy90HA5qPVfhoycL9PvKj/tE12CKY5pkI1aKf6AWhbNWFhaxkpmXvS2ZvtfrkGWIJg==
+  dependencies:
+    "@mdx-js/mdx" "^1.6.22"
+    "@parcel/plugin" "2.3.1"
+
 "@parcel/transformer-postcss@2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@parcel/transformer-postcss/-/transformer-postcss-2.3.1.tgz#04719566cbd298bd9b4fa581996bfeff5b6af224"
