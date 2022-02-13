@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { Box, Text, tokens } from '../../';
+import { Box, Text } from '../../';
 
 export const styles = {
   container: css`

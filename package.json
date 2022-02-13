@@ -15,12 +15,21 @@
     "clean:parcel": "manypkg run @ds-boilerplate/parcel-example clean",
     "clean:root": "rimraf --no-glob .parcel-cache tsconfig.tsbuildinfo ./node_modules/.cache",
     "clean": "yarn clean:root && yarn clean:ds && yarn clean:parcel && yarn clean:next",
-    "build:ds": "manypkg run @unpublished/design-system clean && manypkg run @unpublished/design-system build",
     "build:next": "manypkg run @ds-boilerplate/nextjs-example build",
     "build:next:static": "manypkg run @ds-boilerplate/nextjs-example build:static",
+    "dev:parcel": "manypkg run @ds-boilerplate/parcel-example dev",
     "dev:next": "manypkg run @ds-boilerplate/nextjs-example dev",
-    "dep:fix": "manypkg fix",
-    "dep:check": "manypkg check"
+    "build": "preconstruct build",
+    "// dev": "// why isnt this working? preconstruct dev",
+    "dev": "preconstruct dev",
+    "watch": "preconstruct watch",
+    "fix": "manypkg fix && preconstruct fix",
+    "check": "manypkg check && preconstruct validate",
+    "ds:storybook": "manypkg run @unpublished/design-system storybook",
+    "typecheck:ds": "manypkg run @unpublished/design-system typecheck",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "// postinstall": "preconstruct dev"
   },
   "engines": {
     "node": "^14.13.1 || >=16.0.0",
@@ -28,15 +37,35 @@
     "npm": "please-use-yarn"
   },
   "dependencies": {
+    "@emotion/eslint-plugin": "^11.7.0",
     "@manypkg/cli": "^0.19.1",
     "@mdx-js/react": "^2.0.0",
-    "@parcel/packager-ts": "^2.3.1",
-    "@parcel/transformer-mdx": "2.3.1",
-    "@parcel/transformer-typescript-types": "^2.3.1",
+    "@preconstruct/cli": "^2.1.5",
+    "@typescript-eslint/eslint-plugin": "5.8.1",
+    "@typescript-eslint/parser": "5.8.1",
+    "eslint": "8.5.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jest": "25.3.2",
+    "eslint-plugin-jest-formatting": "3.1.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-regexp": "1.5.1",
+    "eslint-plugin-storybook": "0.5.5",
+    "eslint-plugin-testing-library": "5.0.1",
+    "prettier": "2.5.1",
     "rimraf": "3.0.2",
     "typescript": "4.5.4"
   },
   "manypkg": {
     "defaultBranch": "main"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/design-system"
+    ]
   }
 }

@@ -1,15 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./src",
+    "esModuleInterop": true,
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
+    "module": "commonjs",
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
     "incremental": true,
-    "outDir": "dist",
-    "paths": {},
     "plugins": [
       {
         "name": "typescript-styled-plugin"
@@ -17,5 +16,5 @@
     ],
     "types": ["jest", "node"]
   },
-  "exclude": ["dist"]
+  "exclude": ["node_modules", ".yarn", "dist"]
 }

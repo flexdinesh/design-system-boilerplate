@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { ThemeProvider as EmotionThemeProvider, Global } from '@emotion/react';
-import React from 'react';
-import {
+import React, {
   createContext,
   useState,
   useCallback,

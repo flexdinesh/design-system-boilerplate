@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import { css, CSSObject } from '@emotion/react';
-import { Box } from '../Box/Box';
+import React from 'react';
 import { tokens } from '../../core/theme';
+import { Box } from '../Box/Box';
 
 export type CalloutProps = {
   variant?: 'primary' | 'secondary' | 'ghost';
@@ -54,7 +54,7 @@ export const Callout: React.FC<CalloutProps> = (props) => {
       ...(variant && variantStyles[variant]),
       ...(spacing && spacingStyles[spacing]),
     });
-  }, [spacing]);
+  }, [variant, spacing]);
 
   return (
     <Box as={'blockquote'} css={componentStyles} {...rest}>

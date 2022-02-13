@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { Box, Text } from 'src/design-system';
+import { Box } from '../design-system';
 import AboutMDX from './about.mdx';
 
 export const styles = {

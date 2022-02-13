@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /** @jsxImportSource @emotion/react */
-import React from 'react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
 import { MDXProvider as MDXProviderImported } from '@mdx-js/react';
-import { Callout, Text, tokens } from 'src/design-system';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import React from 'react';
+import { Callout, Text, tokens } from '../design-system';
 import { theme } from './prism-theme';
 
 const CodeHighlight: React.FC<{ className: string; children: string }> = ({
@@ -28,8 +29,7 @@ const CodeHighlight: React.FC<{ className: string; children: string }> = ({
             overflow: 'auto',
             padding: 4,
           },
-        }}
-      >
+        }}>
         {children?.trim()}
       </code>
     );
@@ -42,8 +42,7 @@ const CodeHighlight: React.FC<{ className: string; children: string }> = ({
       {...defaultProps}
       theme={theme}
       code={children}
-      language={language}
-    >
+      language={language}>
       {({
         className,
         style,
@@ -75,11 +74,12 @@ const CodeHighlight: React.FC<{ className: string; children: string }> = ({
               'span.token.script.language-javascript': {
                 color: tokens.colors.codeText,
               },
-            }}
-          >
+            }}>
             {codeTokens.map((line, i) => (
+              // eslint-disable-next-line react/jsx-key
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
+                  // eslint-disable-next-line react/jsx-key
                   <span {...getTokenProps({ token, key })} />
                 ))}
               </div>
@@ -91,52 +91,51 @@ const CodeHighlight: React.FC<{ className: string; children: string }> = ({
   );
 };
 
-const H1 = (props: React.PropsWithChildren<{}>) => (
+const H1: React.FC = (props) => (
   <Text as="h1" {...props}>
     {props.children}
   </Text>
 );
 
-const H2 = (props: React.PropsWithChildren<{}>) => (
+const H2: React.FC = (props) => (
   <Text as="h2" {...props}>
     {props.children}
   </Text>
 );
 
-const H3 = (props: React.PropsWithChildren<{}>) => (
+const H3: React.FC = (props) => (
   <Text as="h3" {...props}>
     {props.children}
   </Text>
 );
 
-const H4 = (props: React.PropsWithChildren<{}>) => (
+const H4: React.FC = (props) => (
   <Text as="h4" {...props}>
     {props.children}
   </Text>
 );
 
-const P = (props: React.PropsWithChildren<{}>) => (
+const P: React.FC = (props) => (
   <Text as="p" {...props}>
     {props.children}
   </Text>
 );
 
-const Blockquote = (props: React.PropsWithChildren<{}>) => (
+const Blockquote: React.FC = (props) => (
   // @ts-ignore
   <Callout variant="primary" spacing="default" css={{ p: { margin: 0 } }}>
     {props.children}
   </Callout>
 );
 
-const Li = (props: React.PropsWithChildren<{}>) => (
+const Li: React.FC = (props) => (
   <li
     {...props}
     css={{
       lineHeight: tokens.lineHeights.body,
       color: tokens.colors.textBody,
       margin: '0.5rem 0',
-    }}
-  >
+    }}>
     {props.children}
   </li>
 );

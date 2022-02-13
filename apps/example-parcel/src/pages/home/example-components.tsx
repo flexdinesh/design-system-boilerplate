@@ -23,8 +23,7 @@ export const ExampleComponents = () => {
           padding: '1rem 0',
           gap: tokens.space.medium,
         }}
-        alignItems="center"
-      >
+        alignItems="center">
         <Button variant="primary">Primary</Button>
         <Button variant="secondary">Secondary</Button>
       </Box>
@@ -36,8 +35,7 @@ export const ExampleComponents = () => {
         css={{
           padding: '1rem 0',
           gap: tokens.space.medium,
-        }}
-      >
+        }}>
         <Callout variant="primary">
           <Text as="span">
             <strong>Primary variant.</strong> You can write anything here to

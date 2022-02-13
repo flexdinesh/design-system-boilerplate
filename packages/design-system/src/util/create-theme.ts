@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import clone from 'just-clone';
 import set from 'just-safe-set';
 import { walkObject } from './object';

@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { Box, Text, tokens } from 'src/design-system';
+import { Box, Text, tokens } from '../design-system';
 
 export const styles = {
   intro: css`
@@ -38,8 +38,7 @@ export const Intro = () => {
             );
             background-clip: text;
             color: transparent;
-          `}
-        >
+          `}>
           That Scales.
         </div>
       </Text>

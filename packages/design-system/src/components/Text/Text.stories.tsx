@@ -13,6 +13,7 @@ export default {
   },
 } as ComponentMeta<typeof Text>;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Template: ComponentStory<typeof Text> = (args) => {
   return (
     <StorybookLayout>

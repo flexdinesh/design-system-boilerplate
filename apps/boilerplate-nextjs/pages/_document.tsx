@@ -1,3 +1,5 @@
+import { cache } from '@emotion/css';
+import createEmotionServer from '@emotion/server/create-instance';
 import Document, {
   Html,
   Head,
@@ -6,8 +8,6 @@ import Document, {
   DocumentContext,
 } from 'next/document';
 import * as React from 'react';
-import createEmotionServer from '@emotion/server/create-instance';
-import { cache } from '@emotion/css';
 
 const renderStatic = async (html: string | undefined) => {
   if (html === undefined) {

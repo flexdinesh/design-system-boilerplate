@@ -39,8 +39,7 @@ export const Intro = () => {
             );
             background-clip: text;
             color: transparent;
-          `}
-        >
+          `}>
           That Scales.
         </div>
       </Text>

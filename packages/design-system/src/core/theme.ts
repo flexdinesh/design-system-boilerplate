@@ -1,7 +1,7 @@
 import { breakpoints, mediaQueries } from '../tokens/breakpoints';
 import * as colors from '../tokens/colors';
-import { space } from '../tokens/space';
 import { radii } from '../tokens/radii';
+import { space } from '../tokens/space';
 import {
   fontSizes,
   fontWeights,

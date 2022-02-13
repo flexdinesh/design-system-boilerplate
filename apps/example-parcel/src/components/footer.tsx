@@ -40,8 +40,7 @@ export const Footer = () => {
               padding-bottom: 0.25rem;
               text-decoration: none;
             }
-          `}
-        >
+          `}>
           Dinesh
         </a>
       </Text>

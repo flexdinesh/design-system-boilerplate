@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { ThemeSwitcher } from 'src/components/theme-switcher';
-import { Box, mediaQueries, tokens } from 'src/design-system';
+import { Box, mediaQueries, tokens } from '../design-system';
+import { ThemeSwitcher } from './theme-switcher';
 
 export const styles = {
   header: css`

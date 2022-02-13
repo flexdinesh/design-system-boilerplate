@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const isObject = (item: unknown) => {
   return typeof item === 'object' && !Array.isArray(item) && item !== null;
 };

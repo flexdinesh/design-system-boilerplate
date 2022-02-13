@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
-      "allowJs": true,
-      "esModuleInterop": true,
+      "esModuleInterop": false,
       "forceConsistentCasingInFileNames": true,
       "incremental": true,
       "isolatedModules": true,
+      "module": "commonjs",
       "moduleResolution": "node",
       "noEmit": true,
       "resolveJsonModule": true,
@@ -12,5 +12,5 @@
       "strict": true,
       "useUnknownInCatchVariables": true,
     },
-    "exclude": ["node_modules", ".yarn"]
+    "exclude": ["node_modules", ".yarn", "dist"]
   }

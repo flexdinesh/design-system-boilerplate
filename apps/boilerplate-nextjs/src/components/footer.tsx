@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { Box, Text, tokens } from 'src/design-system';
+import { Box, Text, tokens } from '../design-system';
 
 export const styles = {
   footer: css`
@@ -40,8 +40,7 @@ export const Footer = () => {
               padding-bottom: 0.25rem;
               text-decoration: none;
             }
-          `}
-        >
+          `}>
           Dinesh
         </a>
       </Text>

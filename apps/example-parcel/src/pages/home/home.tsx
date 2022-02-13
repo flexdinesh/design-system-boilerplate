@@ -1,12 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { Box } from '../../design-system';
-import { Page } from '../../components/page';
-import { Header } from '../../components/header';
 import { Footer } from '../../components/footer';
-import { Intro } from './intro';
+import { Header } from '../../components/header';
+import { Page } from '../../components/page';
+import { Box } from '../../design-system';
 import { About } from './about';
 import { ExampleComponents } from './example-components';
+import { Intro } from './intro';
 
 const styles = {
   homePage: css`

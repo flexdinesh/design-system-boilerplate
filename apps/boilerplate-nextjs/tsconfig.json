@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./",
     "allowJs": true,
@@ -16,10 +16,6 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "paths": {
-      "@design-system/*": ["../design-system/dist/*"],
-      "@design-system": ["../design-system/dist/index"]
-    },
     "plugins": [
       {
         "name": "typescript-styled-plugin"

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { Box, mediaQueries } from '../design-system';
 import { ThemeSwitcher } from './theme-switcher';
-import { Box, mediaQueries, tokens } from '../design-system';
 
 export const styles = {
   header: css`

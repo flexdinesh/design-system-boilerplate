@@ -1,4 +1,4 @@
-import { ThemeProvider, themes } from 'src/design-system';
+import { ThemeProvider, themes } from '../design-system';
 import { MDXProvider } from './mdx-provider';
 
 const Providers: React.FC = ({ children }) => {

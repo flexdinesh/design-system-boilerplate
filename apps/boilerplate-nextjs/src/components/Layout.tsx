@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import { Global } from '@emotion/react';
-import { CSSReset, tokens } from 'src/design-system';
-import Providers from 'src/providers';
-import Meta from 'src/components/meta';
+import React from 'react';
+import Meta from '../components/meta';
+import { CSSReset, tokens } from '../design-system';
+import Providers from '../providers';
 
 export const Layout: React.FC = ({ children }) => {
   return (

@@ -1,4 +1,4 @@
-import { tokens } from 'src/design-system';
+import { tokens } from '../design-system';
 
 export const theme = {
   plain: {
