@@ -23,37 +23,11 @@ const light = createTheme({
   lineHeights,
 });
 
-const dark = createTheme({
-  name: 'dark',
-  breakpoints,
-  mediaQueries,
-  colors: colors.dark,
-  space,
-  radii,
-  fontSizes,
-  fontWeights,
-  fontFamily,
-  lineHeights,
-});
-
 const lightOrange = createTheme({
   name: 'light orange',
   breakpoints,
   mediaQueries,
   colors: colors.lightOrange,
-  space,
-  radii,
-  fontSizes,
-  fontWeights,
-  fontFamily,
-  lineHeights,
-});
-
-const darkHoney = createTheme({
-  name: 'dark honey',
-  breakpoints,
-  mediaQueries,
-  colors: colors.darkHoney,
   space,
   radii,
   fontSizes,
@@ -75,37 +49,11 @@ const lightYellow = createTheme({
   lineHeights,
 });
 
-const darkPink = createTheme({
-  name: 'dark pink',
-  breakpoints,
-  mediaQueries,
-  colors: colors.darkPink,
-  space,
-  radii,
-  fontSizes,
-  fontWeights,
-  fontFamily,
-  lineHeights,
-});
-
 const lightBrown = createTheme({
   name: 'light brown',
   breakpoints,
   mediaQueries,
   colors: colors.lightBrown,
-  space,
-  radii,
-  fontSizes,
-  fontWeights,
-  fontFamily,
-  lineHeights,
-});
-
-const darkOrange = createTheme({
-  name: 'dark orange',
-  breakpoints,
-  mediaQueries,
-  colors: colors.darkOrange,
   space,
   radii,
   fontSizes,
@@ -127,17 +75,69 @@ const paper = createTheme({
   lineHeights,
 });
 
+const dark = createTheme({
+  name: 'dark',
+  breakpoints,
+  mediaQueries,
+  colors: colors.dark,
+  space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
+const darkHoney = createTheme({
+  name: 'dark honey',
+  breakpoints,
+  mediaQueries,
+  colors: colors.darkHoney,
+  space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
+const darkPink = createTheme({
+  name: 'dark pink',
+  breakpoints,
+  mediaQueries,
+  colors: colors.darkPink,
+  space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
+const darkOrange = createTheme({
+  name: 'dark orange',
+  breakpoints,
+  mediaQueries,
+  colors: colors.darkOrange,
+  space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
 /* since we only use css vars as token values - theme keys have the same values across themes */
 export const tokens = light;
 
 export const themes = [
   light,
-  dark,
   lightOrange,
-  darkHoney,
   lightYellow,
-  darkPink,
   lightBrown,
-  darkOrange,
   paper,
+  dark,
+  darkHoney,
+  darkPink,
+  darkOrange,
 ];
