@@ -5,7 +5,7 @@ import { Box, Text, tokens } from '../design-system';
 export const styles = {
   footer: css`
     box-shadow: 0 1px 0 0 ${tokens.colors.border} inset;
-    height: 4rem;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
