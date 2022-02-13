@@ -22,7 +22,9 @@ export const Footer = () => {
       <Text>
         Made by{' '}
         <a
-          href="#"
+          href="https://twitter.com/flexdinesh"
+          target="_blank"
+          rel="noreferrer"
           css={css`
             line-height: 1.75;
             font-weight: ${tokens.fontWeights.semibold};
