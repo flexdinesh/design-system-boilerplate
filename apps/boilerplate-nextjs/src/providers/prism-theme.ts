@@ -56,7 +56,7 @@ export const theme = {
     {
       types: ['function', 'deleted', 'tag'],
       style: {
-        color: tokens.colors.primary600,
+        color: tokens.colors.textHeading,
       },
     },
     {
