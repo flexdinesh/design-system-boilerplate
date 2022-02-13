@@ -52,6 +52,8 @@ const Home: NextPage = () => {
         </Page>
         <a
           href="https://github.com/flexdinesh/design-system-boilerplate"
+          target="_blank"
+          rel="noreferrer"
           css={{
             position: 'fixed',
             bottom: 0,
