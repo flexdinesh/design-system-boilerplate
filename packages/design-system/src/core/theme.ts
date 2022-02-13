@@ -11,7 +11,7 @@ import {
 import { createTheme } from '../util/create-theme';
 
 const light = createTheme({
-  name: 'light',
+  name: 'Light',
   breakpoints,
   mediaQueries,
   colors: colors.light,
@@ -24,7 +24,7 @@ const light = createTheme({
 });
 
 const lightOrange = createTheme({
-  name: 'light orange',
+  name: 'Light Orange',
   breakpoints,
   mediaQueries,
   colors: colors.lightOrange,
@@ -37,7 +37,7 @@ const lightOrange = createTheme({
 });
 
 const lightYellow = createTheme({
-  name: 'light yellow',
+  name: 'Light Yellow',
   breakpoints,
   mediaQueries,
   colors: colors.lightYellow,
@@ -50,7 +50,7 @@ const lightYellow = createTheme({
 });
 
 const lightBrown = createTheme({
-  name: 'light brown',
+  name: 'Light Brown',
   breakpoints,
   mediaQueries,
   colors: colors.lightBrown,
@@ -63,7 +63,7 @@ const lightBrown = createTheme({
 });
 
 const paper = createTheme({
-  name: 'paper',
+  name: 'Paper',
   breakpoints,
   mediaQueries,
   colors: colors.paper,
@@ -76,7 +76,7 @@ const paper = createTheme({
 });
 
 const dark = createTheme({
-  name: 'dark',
+  name: 'Dark',
   breakpoints,
   mediaQueries,
   colors: colors.dark,
@@ -89,7 +89,7 @@ const dark = createTheme({
 });
 
 const darkHoney = createTheme({
-  name: 'dark honey',
+  name: 'Dark Honey',
   breakpoints,
   mediaQueries,
   colors: colors.darkHoney,
@@ -102,7 +102,7 @@ const darkHoney = createTheme({
 });
 
 const darkPink = createTheme({
-  name: 'dark pink',
+  name: 'Dark Pink',
   breakpoints,
   mediaQueries,
   colors: colors.darkPink,
@@ -115,7 +115,7 @@ const darkPink = createTheme({
 });
 
 const darkOrange = createTheme({
-  name: 'dark orange',
+  name: 'Dark Orange',
   breakpoints,
   mediaQueries,
   colors: colors.darkOrange,

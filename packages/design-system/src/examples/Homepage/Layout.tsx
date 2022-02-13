@@ -5,7 +5,7 @@ import { CSSReset, ThemeProvider, themes, tokens } from '../../';
 
 const Providers: React.FC = ({ children }) => {
   return (
-    <ThemeProvider themes={themes} defaultTheme="light">
+    <ThemeProvider themes={themes} defaultTheme="Light">
       {children}
     </ThemeProvider>
   );

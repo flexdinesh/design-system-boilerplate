@@ -33,7 +33,7 @@ export const StorybookLayout: React.FC = ({ children }) => {
   return (
     <React.Fragment>
       <CSSReset />
-      <ThemeProvider themes={themes} defaultTheme="light">
+      <ThemeProvider themes={themes} defaultTheme="Light">
         <ThemeSwitcher />
         <Box
           width="100%"

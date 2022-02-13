@@ -43,7 +43,7 @@ export default class AppDocument extends Document {
       <Html>
         <Head />
         {/* default server rendered theme */}
-        <body data-theme="light">
+        <body data-theme="Light">
           <Main />
           <NextScript />
         </body>
