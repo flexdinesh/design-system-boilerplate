@@ -33,9 +33,6 @@ export default class AppDocument extends Document {
             data-emotion={`css ${ids.join(' ')}`}
             dangerouslySetInnerHTML={{ __html: css }}
           />
-          <script
-            dangerouslySetInnerHTML={{ __html: `console.log("yoyo");` }}
-          ></script>
         </React.Fragment>
       ),
     };
