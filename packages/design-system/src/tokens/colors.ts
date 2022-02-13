@@ -40,128 +40,6 @@ const light = {
   linkActive: '#0b55d5',
 };
 
-// color tokens - just demo values - find your right colors
-// https://www.happyhues.co/palettes/9
-const orange = {
-  primaryBase: '#ff8e3c',
-  primary50: '#ffeedc',
-  primary100: '#ffd2af',
-  primary200: '#ffb57f',
-  primary300: '#ff984d',
-  primary400: '#fe7a1c',
-  primary500: '#e56103',
-  primary600: '#b34b00',
-  primary700: '#813600',
-  primary800: '#4f1f00',
-  primary900: '#200800',
-
-  secondaryBase: '#d9376e',
-  secondary50: '#ffe6f0',
-  secondary100: '#f8bdd0',
-  secondary200: '#ed93b1',
-  secondary300: '#e46892',
-  secondary400: '#da3e73',
-  secondary500: '#c1255a',
-  secondary600: '#971a46',
-  secondary700: '#6d1132',
-  secondary800: '#43071e',
-  secondary900: '#1c000b',
-
-  transparentPrimaryBg: 'rgba(255, 142, 60, 0.05)',
-  transparentSecondaryBg: 'rgba(217, 55, 110, 0.05)',
-  background: '#eff0f3',
-  backgroundAlternate: '#000f1f',
-  textHeading: '#0d0d0d',
-  textBody: '#2a2a2a',
-  textAlternate: '#0d0d0d',
-
-  codeText: '#47546b',
-  codeBg: '#f6f7f9',
-  border: '#e2e8f0',
-  link: '#166bff',
-  linkActive: '#0b55d5',
-};
-
-// https://www.happyhues.co/palettes/14
-const yellow = {
-  primaryBase: '#ffd803',
-  primary50: '#fffbda',
-  primary100: '#fff3ad',
-  primary200: '#ffeb7d',
-  primary300: '#ffe34b',
-  primary400: '#ffdb1a',
-  primary500: '#e6c200',
-  primary600: '#b39700',
-  primary700: '#806c00',
-  primary800: '#4d4100',
-  primary900: '#1c1600',
-
-  secondaryBase: '#bae8e8',
-  secondary50: '#e5fbfb',
-  secondary100: '#c6ecec',
-  secondary200: '#a3dede',
-  secondary300: '#80d1d1',
-  secondary400: '#60c5c5',
-  secondary500: '#48abab',
-  secondary600: '#378585',
-  secondary700: '#265f5f',
-  secondary800: '#133939',
-  secondary900: '#001414',
-
-  transparentPrimaryBg: 'rgba(255, 216, 3, 0.05)',
-  transparentSecondaryBg: 'rgba(186, 232, 232, 0.05)',
-  background: '#fffffe',
-  backgroundAlternate: '#1c1600',
-  textHeading: '#272343',
-  textBody: '#2d334a',
-  textAlternate: '#272343',
-  codeText: '#47546b',
-  codeBg: '#f6f7f9',
-  border: '#e2e8f0',
-  link: '#166bff',
-  linkActive: '#0b55d5',
-};
-
-// https://www.happyhues.co/palettes/11
-const brown = {
-  primaryBase: '#8c7851',
-  primary50: '#fcf2e4',
-  primary100: '#e5dcca',
-  primary200: '#d1c5ab',
-  primary300: '#bfad8d',
-  primary400: '#ab966e',
-  primary500: '#917d54',
-  primary600: '#716140',
-  primary700: '#52452d',
-  primary800: '#312a18',
-  primary900: '#140e00',
-
-  secondaryBase: '#f25042',
-  secondary50: '#ffe6e3',
-  secondary100: '#febcb5',
-  secondary200: '#f89087',
-  secondary300: '#f46458',
-  secondary400: '#ef3929',
-  secondary500: '#d62110',
-  secondary600: '#a7180b',
-  secondary700: '#781007',
-  secondary800: '#4a0702',
-  secondary900: '#1f0000',
-
-  transparentPrimaryBg: 'rgba(140, 120, 81, 0.05)',
-  transparentSecondaryBg: 'rgba(242, 80, 66, 0.05)',
-  background: '#f9f4ef',
-  backgroundAlternate: '#140e00',
-  textHeading: '#020826',
-  textBody: '#716040',
-  textAlternate: '#fffffe',
-  codeText: '#47546b',
-  codeBg: '#f6f7f9',
-  border: '#e2e8f0',
-  link: '#166bff',
-  linkActive: '#0b55d5',
-};
-
 // https://www.happyhues.co/palettes/4
 const dark = {
   primaryBase: '#7f5af0',
@@ -202,8 +80,50 @@ const dark = {
   linkActive: '#89b3fa',
 };
 
+// color tokens - just demo values - find your right colors
+// https://www.happyhues.co/palettes/9
+const lightOrange = {
+  primaryBase: '#ff8e3c',
+  primary50: '#ffeedc',
+  primary100: '#ffd2af',
+  primary200: '#ffb57f',
+  primary300: '#ff984d',
+  primary400: '#fe7a1c',
+  primary500: '#e56103',
+  primary600: '#b34b00',
+  primary700: '#813600',
+  primary800: '#4f1f00',
+  primary900: '#200800',
+
+  secondaryBase: '#d9376e',
+  secondary50: '#ffe6f0',
+  secondary100: '#f8bdd0',
+  secondary200: '#ed93b1',
+  secondary300: '#e46892',
+  secondary400: '#da3e73',
+  secondary500: '#c1255a',
+  secondary600: '#971a46',
+  secondary700: '#6d1132',
+  secondary800: '#43071e',
+  secondary900: '#1c000b',
+
+  transparentPrimaryBg: 'rgba(255, 142, 60, 0.05)',
+  transparentSecondaryBg: 'rgba(217, 55, 110, 0.05)',
+  background: '#eff0f3',
+  backgroundAlternate: '#000f1f',
+  textHeading: '#0d0d0d',
+  textBody: '#2a2a2a',
+  textAlternate: '#0d0d0d',
+
+  codeText: '#47546b',
+  codeBg: '#f6f7f9',
+  border: '#e2e8f0',
+  link: '#166bff',
+  linkActive: '#0b55d5',
+};
+
 // https://www.happyhues.co/palettes/10
-const paleOrange = {
+const darkHoney = {
   primaryBase: '#f9bc60',
   primary50: '#fff4dc',
   primary100: '#fee0b1',
@@ -242,8 +162,48 @@ const paleOrange = {
   linkActive: '#89b3fa',
 };
 
+// https://www.happyhues.co/palettes/14
+const lightYellow = {
+  primaryBase: '#ffd803',
+  primary50: '#fffbda',
+  primary100: '#fff3ad',
+  primary200: '#ffeb7d',
+  primary300: '#ffe34b',
+  primary400: '#ffdb1a',
+  primary500: '#e6c200',
+  primary600: '#b39700',
+  primary700: '#806c00',
+  primary800: '#4d4100',
+  primary900: '#1c1600',
+
+  secondaryBase: '#bae8e8',
+  secondary50: '#e5fbfb',
+  secondary100: '#c6ecec',
+  secondary200: '#a3dede',
+  secondary300: '#80d1d1',
+  secondary400: '#60c5c5',
+  secondary500: '#48abab',
+  secondary600: '#378585',
+  secondary700: '#265f5f',
+  secondary800: '#133939',
+  secondary900: '#001414',
+
+  transparentPrimaryBg: 'rgba(255, 216, 3, 0.05)',
+  transparentSecondaryBg: 'rgba(186, 232, 232, 0.05)',
+  background: '#fffffe',
+  backgroundAlternate: '#1c1600',
+  textHeading: '#272343',
+  textBody: '#2d334a',
+  textAlternate: '#272343',
+  codeText: '#47546b',
+  codeBg: '#f6f7f9',
+  border: '#e2e8f0',
+  link: '#166bff',
+  linkActive: '#0b55d5',
+};
+
 // https://www.happyhues.co/palettes/12
-const palePink = {
+const darkPink = {
   primaryBase: '#eebbc3',
   primary50: '#ffe9ec',
   primary100: '#f0c2c9',
@@ -256,20 +216,20 @@ const palePink = {
   primary800: '#3d0f17',
   primary900: '#180307',
 
-  secondaryBase: '#eebbc3',
-  secondary50: '#ffe9ec',
-  secondary100: '#f0c2c9',
-  secondary200: '#e49aa5',
-  secondary300: '#d87282',
-  secondary400: '#cd4b5e',
-  secondary500: '#b53345',
-  secondary600: '#8d2736',
-  secondary700: '#641b27',
-  secondary800: '#3d0f17',
-  secondary900: '#180307',
+  secondaryBase: '#bae8e8',
+  secondary50: '#e5fbfb',
+  secondary100: '#c6ecec',
+  secondary200: '#a3dede',
+  secondary300: '#80d1d1',
+  secondary400: '#60c5c5',
+  secondary500: '#48abab',
+  secondary600: '#378585',
+  secondary700: '#265f5f',
+  secondary800: '#133939',
+  secondary900: '#001414',
 
   transparentPrimaryBg: 'rgba(238, 187, 195, 0.05)',
-  transparentSecondaryBg: 'rgba(238, 187, 195, 0.05)',
+  transparentSecondaryBg: 'rgba(186, 232, 232, 0.05)',
   background: '#232946',
   backgroundAlternate: '#b8c1ec',
   textHeading: '#fffffe',
@@ -282,8 +242,48 @@ const palePink = {
   linkActive: '#89b3fa',
 };
 
+// https://www.happyhues.co/palettes/11
+const lightBrown = {
+  primaryBase: '#8c7851',
+  primary50: '#fcf2e4',
+  primary100: '#e5dcca',
+  primary200: '#d1c5ab',
+  primary300: '#bfad8d',
+  primary400: '#ab966e',
+  primary500: '#917d54',
+  primary600: '#716140',
+  primary700: '#52452d',
+  primary800: '#312a18',
+  primary900: '#140e00',
+
+  secondaryBase: '#f25042',
+  secondary50: '#ffe6e3',
+  secondary100: '#febcb5',
+  secondary200: '#f89087',
+  secondary300: '#f46458',
+  secondary400: '#ef3929',
+  secondary500: '#d62110',
+  secondary600: '#a7180b',
+  secondary700: '#781007',
+  secondary800: '#4a0702',
+  secondary900: '#1f0000',
+
+  transparentPrimaryBg: 'rgba(140, 120, 81, 0.05)',
+  transparentSecondaryBg: 'rgba(242, 80, 66, 0.05)',
+  background: '#f9f4ef',
+  backgroundAlternate: '#140e00',
+  textHeading: '#020826',
+  textBody: '#716040',
+  textAlternate: '#fffffe',
+  codeText: '#47546b',
+  codeBg: '#f6f7f9',
+  border: '#e2e8f0',
+  link: '#166bff',
+  linkActive: '#0b55d5',
+};
+
 // https://www.happyhues.co/palettes/13
-const brightOrange = {
+const darkOrange = {
   primaryBase: '#ff8906',
   primary50: '#fff2da',
   primary100: '#ffdaae',
@@ -322,13 +322,55 @@ const brightOrange = {
   linkActive: '#89b3fa',
 };
 
+// color tokens - just demo values - find your right colors
+// I created this theme on my own - because I love black and white themes
+const paper = {
+  primaryBase: '#47546b',
+  primary50: '#eaf3ff',
+  primary100: '#cfd7e4',
+  primary200: '#b1bccd',
+  primary300: '#94a1b8',
+  primary400: '#7686a2',
+  primary500: '#5d6c89',
+  primary600: '#47546b',
+  primary700: '#323c4e',
+  primary800: '#1d2431',
+  primary900: '#040d17',
+
+  secondaryBase: '#94a5b8',
+  secondary50: '#eaf7ff',
+  secondary100: '#cfdbe4',
+  secondary200: '#b1c0cd',
+  secondary300: '#94a5b8',
+  secondary400: '#7689a2',
+  secondary500: '#5d6c89',
+  secondary600: '#47546b',
+  secondary700: '#323c4e',
+  secondary800: '#1d2431',
+  secondary900: '#040d17',
+
+  transparentPrimaryBg: 'rgba(109, 112, 120, 0.05)',
+  transparentSecondaryBg: 'rgba(148, 165, 184, 0.05)',
+  background: '#fffffe',
+  backgroundAlternate: '#000f1f',
+  textHeading: '#094067',
+  textBody: '#47546b',
+  textAlternate: '#fffffe',
+  codeText: '#47546b',
+  codeBg: '#f6f7f9',
+  border: '#e2e8f0',
+  link: '#166bff',
+  linkActive: '#0b55d5',
+};
+
 export {
   light,
-  orange,
-  yellow,
-  brown,
   dark,
-  paleOrange,
-  palePink,
-  brightOrange,
+  lightOrange,
+  darkHoney,
+  lightYellow,
+  darkPink,
+  lightBrown,
+  darkOrange,
+  paper,
 };

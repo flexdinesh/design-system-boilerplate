@@ -10,7 +10,6 @@ import {
 } from '../tokens/typography';
 import { createTheme } from '../util/create-theme';
 
-/* light mode - default */
 const light = createTheme({
   name: 'light',
   breakpoints,
@@ -24,21 +23,6 @@ const light = createTheme({
   lineHeights,
 });
 
-/* orange mode  */
-const orange = createTheme({
-  name: 'orange',
-  breakpoints,
-  mediaQueries,
-  colors: colors.orange,
-  space,
-  radii,
-  fontSizes,
-  fontWeights,
-  fontFamily,
-  lineHeights,
-});
-
-/* dark mode */
 const dark = createTheme({
   name: 'dark',
   breakpoints,
@@ -52,12 +36,11 @@ const dark = createTheme({
   lineHeights,
 });
 
-/* yellow mode */
-const yellow = createTheme({
-  name: 'yellow',
+const lightOrange = createTheme({
+  name: 'light orange',
   breakpoints,
   mediaQueries,
-  colors: colors.yellow,
+  colors: colors.lightOrange,
   space,
   radii,
   fontSizes,
@@ -66,12 +49,11 @@ const yellow = createTheme({
   lineHeights,
 });
 
-/* brown mode */
-const brown = createTheme({
-  name: 'brown',
+const darkHoney = createTheme({
+  name: 'dark honey',
   breakpoints,
   mediaQueries,
-  colors: colors.brown,
+  colors: colors.darkHoney,
   space,
   radii,
   fontSizes,
@@ -80,12 +62,11 @@ const brown = createTheme({
   lineHeights,
 });
 
-/* dark - pale orange mode */
-const paleOrange = createTheme({
-  name: 'pale orange',
+const lightYellow = createTheme({
+  name: 'light yellow',
   breakpoints,
   mediaQueries,
-  colors: colors.paleOrange,
+  colors: colors.lightYellow,
   space,
   radii,
   fontSizes,
@@ -94,12 +75,11 @@ const paleOrange = createTheme({
   lineHeights,
 });
 
-/* dark - pale pink mode */
-const palePink = createTheme({
-  name: 'pale pink',
+const darkPink = createTheme({
+  name: 'dark pink',
   breakpoints,
   mediaQueries,
-  colors: colors.palePink,
+  colors: colors.darkPink,
   space,
   radii,
   fontSizes,
@@ -108,12 +88,37 @@ const palePink = createTheme({
   lineHeights,
 });
 
-/* dark - bright orange mode */
-const brightOrange = createTheme({
-  name: 'bright orange',
+const lightBrown = createTheme({
+  name: 'light brown',
   breakpoints,
   mediaQueries,
-  colors: colors.brightOrange,
+  colors: colors.lightBrown,
+  space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
+const darkOrange = createTheme({
+  name: 'dark orange',
+  breakpoints,
+  mediaQueries,
+  colors: colors.darkOrange,
+  space,
+  radii,
+  fontSizes,
+  fontWeights,
+  fontFamily,
+  lineHeights,
+});
+
+const paper = createTheme({
+  name: 'paper',
+  breakpoints,
+  mediaQueries,
+  colors: colors.paper,
   space,
   radii,
   fontSizes,
@@ -128,10 +133,11 @@ export const tokens = light;
 export const themes = [
   light,
   dark,
-  orange,
-  yellow,
-  paleOrange,
-  brown,
-  palePink,
-  brightOrange,
+  lightOrange,
+  darkHoney,
+  lightYellow,
+  darkPink,
+  lightBrown,
+  darkOrange,
+  paper,
 ];
