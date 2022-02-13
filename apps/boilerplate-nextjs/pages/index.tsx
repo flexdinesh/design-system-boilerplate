@@ -8,7 +8,7 @@ import { Header } from '../src/components/header';
 import { Intro } from '../src/components/intro';
 import { Layout } from '../src/components/layout';
 import { Page } from '../src/components/page';
-import { Box, Callout } from '../src/design-system';
+import { Box } from '../src/design-system';
 
 const styles = {
   homePage: css`
@@ -21,14 +21,6 @@ const styles = {
   `,
 };
 
-const BrokenNote = () => {
-  return (
-    <Callout variant="secondary">
-      Emotion critical style extraction is broken at the moment!
-    </Callout>
-  );
-};
-
 const Home: NextPage = () => {
   return (
     <Layout>
@@ -36,7 +28,6 @@ const Home: NextPage = () => {
         <Header />
         <Page>
           <main css={styles.main}>
-            <BrokenNote />
             <Intro />
             <About />
             <ExampleComponents />
